@@ -50,6 +50,15 @@ export const fr = defineConfig({
     darkModeSwitchLabel: 'Passer an thème sombre',
     lightModeSwitchTitle: 'Passer au thème clair',
     darkModeSwitchTitle: 'Apparence',
+
+    notFound: {
+      title: 'PAGE NON TROUVEE',
+      quote:
+        'Mais si vous ne changez pas de direction et si vous continuez à regarder, vous risquez de vous retrouver là où vous allez.',
+      linkLabel: "aller à l'accueil",
+      linkText: "Me ramener à l'accueil",
+      code: '404',
+    },
   },
 })
 
