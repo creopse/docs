@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./chunks/framework.EV3G-tmK.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{"layout":"doc"},"headers":[],"relativePath":"guide/about.md","filePath":"guide/about.md"}'),o={name:"guide/about.md"};function r(c,s,n,d,i,u){return a(),e("div")}const m=t(o,[["render",r]]);export{_ as __pageData,m as default};
