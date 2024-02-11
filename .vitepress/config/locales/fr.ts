@@ -18,7 +18,12 @@ export const fr = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/creopse/docs/edit/main/:path',
+      pattern: ({ filePath }) => {
+        return `https://github.com/creopse/docs/edit/master/src/${filePath.replace(
+          '/docs',
+          ''
+        )}`
+      },
       text: 'Suggérer des modifications à cette page',
     },
 
@@ -57,8 +62,17 @@ function nav(): DefaultTheme.NavItem[] {
       link: '/fr/faq/',
     },
     {
-      text: 'Journal de modifications',
-      link: 'https://github.com/creopse/creopse/releases',
+      text: 'v1.0.0',
+      items: [
+        {
+          text: 'Journal de modifications',
+          link: 'https://github.com/creopse/creopse/releases',
+        },
+        {
+          text: 'Signaler un bug',
+          link: 'https://github.com/creopse/creopse/issues',
+        },
+      ],
     },
   ]
 }
@@ -83,4 +97,26 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       ],
     },
   ]
+}
+
+export const search: DefaultTheme.LocalSearchOptions['locales'] = {
+  fr: {
+    translations: {
+      button: {
+        buttonText: 'Rechercher',
+        buttonAriaLabel: 'Rechercher',
+      },
+      modal: {
+        displayDetails: 'Afficher la liste détaillée',
+        backButtonTitle: 'Retour',
+        noResultsText: "Aucun résultat n'a été trouvé",
+        resetButtonTitle: 'Réinitialiser la recherche',
+        footer: {
+          selectText: 'sélectionner',
+          navigateText: 'naviguer',
+          closeText: 'fermer',
+        },
+      },
+    },
+  },
 }

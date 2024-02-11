@@ -18,7 +18,12 @@ export const en = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/creopse/docs/edit/main/:path',
+      pattern: ({ filePath }) => {
+        return `https://github.com/creopse/docs/edit/master/src/${filePath.replace(
+          '/docs',
+          ''
+        )}`
+      },
       text: 'Suggest changes to this page',
     },
   },
@@ -33,8 +38,17 @@ function nav(): DefaultTheme.NavItem[] {
       link: '/faq/',
     },
     {
-      text: 'Changelog',
-      link: 'https://github.com/creopse/creopse/releases',
+      text: 'v1.0.0',
+      items: [
+        {
+          text: 'Changelog',
+          link: 'https://github.com/creopse/creopse/releases',
+        },
+        {
+          text: 'Report a bug',
+          link: 'https://github.com/creopse/creopse/issues',
+        },
+      ],
     },
   ]
 }
