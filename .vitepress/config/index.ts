@@ -32,7 +32,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: {
       light: '/images/creopse-icon.svg',
-      dark: '/images/creopse-icon-reverse.svg',
+      dark: '/images/creopse-icon.svg',
       alt: 'Creopse',
       width: 48,
       height: 48,

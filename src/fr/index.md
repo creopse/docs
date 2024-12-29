@@ -7,7 +7,7 @@ hero:
   tagline: Creopse est un système de gestion de contenu (SGC) hybride.
   image:
     light: /images/creopse-icon.svg
-    dark: /images/creopse-icon-reverse.svg
+    dark: /images/creopse-icon.svg
     alt: Creopse
   actions:
     - theme: brand
