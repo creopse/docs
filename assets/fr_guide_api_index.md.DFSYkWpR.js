@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.Cpk3kMpH.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{"layout":"doc"},"headers":[],"relativePath":"fr/guide/api/index.md","filePath":"fr/guide/api/index.md"}'),r={name:"fr/guide/api/index.md"};function i(n,o,d,c,s,p){return a(),t("div")}const m=e(r,[["render",i]]);export{_ as __pageData,m as default};
