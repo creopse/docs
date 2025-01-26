@@ -38,7 +38,7 @@ function nav(): DefaultTheme.NavItem[] {
       link: '/faq/',
     },
     {
-      text: 'v1.0.0',
+      text: 'v0.0.7',
       items: [
         {
           text: 'Changelog',
@@ -58,13 +58,16 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     {
       text: 'Introduction',
       collapsed: false,
-      items: [{ text: 'Getting started', link: 'getting-started' }],
+      items: [
+        { text: 'Getting started', link: 'getting-started' },
+        { text: 'Configuration', link: 'configuration' },
+      ],
     },
-    {
+    /* {
       text: 'Others',
       collapsed: false,
       items: [{ text: 'About', link: 'about' }],
-    },
+    }, */
     {
       collapsed: false,
       items: [

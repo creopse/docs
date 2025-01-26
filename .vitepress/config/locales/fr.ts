@@ -71,7 +71,7 @@ function nav(): DefaultTheme.NavItem[] {
       link: '/fr/faq/',
     },
     {
-      text: 'v1.0.0',
+      text: 'v0.0.7',
       items: [
         {
           text: 'Journal de modifications',
@@ -91,13 +91,16 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
     {
       text: 'Introduction',
       collapsed: false,
-      items: [{ text: 'Pour commencer', link: 'getting-started' }],
+      items: [
+        { text: 'Pour commencer', link: 'getting-started' },
+        { text: 'Configuration', link: 'configuration' },
+      ],
     },
-    {
+    /* {
       text: 'Autres',
       collapsed: false,
       items: [{ text: 'A propos', link: 'about' }],
-    },
+    }, */
     {
       collapsed: false,
       items: [
