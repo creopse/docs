@@ -10,10 +10,29 @@ Welcome to the **Creopse** documentation! This guide will help you get started w
 
 Before installing Creopse, ensure your environment meets the following prerequisites:
 
+### System Requirements
+
 - Laravel 10
 - PHP 8.1 or higher
 - Composer
 - pnpm
+
+### Knowledge Requirements
+
+Since **Creopse** is a **hybrid Content Management System (CMS)** built on **Laravel** and **Inertia.js**, you should be familiar with:
+
+- **Laravel**: Understanding of routing, middleware, migrations, and Eloquent ORM.
+- **Inertia.js**: Knowledge of how it bridges Laravel (backend) with a modern frontend framework.
+- **Vue.js 3 or React**: You can use **either** Vue 3 or React as the frontend framework with Inertia.js.
+
+If you're new to **Inertia.js**, **Vue.js**, or **React**, it's recommended to review their documentation before diving into Creopse:
+
+- [Laravel Documentation](https://laravel.com/docs)
+- [Inertia.js Documentation](https://inertiajs.com)
+- [Vue.js 3 Documentation](https://vuejs.org)
+- [React Documentation](https://react.dev)
+
+With these prerequisites in place, you'll be ready to install and use **Creopse** efficiently!
 
 ## Installation
 
@@ -95,6 +114,6 @@ Log in using the credentials you configured (or the default credentials if provi
 Explore the following sections to learn more about Creopse:
 
 - [Configuration](./configuration.md): Customize Creopse settings to suit your needs.
-- [API Reference](./api/index.md): Understand the available endpoints and APIs for your project.
+- [API Reference](./advanced/api-usage.md): Understand the available endpoints and APIs for your project.
 
 **Ready to dive deeper? Start customizing your Creopse CMS today!**

@@ -10,10 +10,29 @@ Bienvenue dans la documentation de **Creopse** ! Ce guide vous aidera à démarr
 
 Avant d'installer Creopse, assurez-vous que votre environnement remplit les conditions suivantes :
 
+### Configuration système
+
 - Laravel 10
 - PHP 8.1 ou supérieur
 - Composer
 - pnpm
+
+### Connaissances requises
+
+Étant donné que **Creopse** est un **système de gestion de contenu hybride (CMS)** basé sur **Laravel** et **Inertia.js**, il est recommandé d’avoir des connaissances sur :
+
+- **Laravel** : Compréhension du routage, des middlewares, des migrations et de l’ORM Eloquent.
+- **Inertia.js** : Savoir comment il connecte Laravel (backend) avec un framework frontend moderne.
+- **Vue.js 3 ou React** : Vous pouvez utiliser **Vue 3 ou React** comme framework frontend avec Inertia.js.
+
+Si vous débutez avec **Inertia.js**, **Vue.js** ou **React**, il est conseillé de consulter leur documentation avant d'utiliser Creopse :
+
+- [Documentation Laravel](https://laravel.com/docs)
+- [Documentation Inertia.js](https://inertiajs.com)
+- [Documentation Vue.js 3](https://vuejs.org)
+- [Documentation React](https://react.dev)
+
+Avec ces prérequis en place, vous serez prêt à installer et utiliser **Creopse** efficacement !
 
 ## Installation
 
@@ -95,6 +114,6 @@ Connectez-vous avec les identifiants que vous avez configurés (ou les identifia
 Explorez les sections suivantes pour en savoir plus sur Creopse :
 
 - [Configuration](./configuration.md) : Personnalisez les paramètres de Creopse selon vos besoins.
-- [Référence API](./api/index.md) : Découvrez les points de terminaison et les APIs disponibles pour votre projet.
+- [Référence API](./advanced/api-usage.md) : Découvrez les points de terminaison et les APIs disponibles pour votre projet.
 
 **Prêt à aller plus loin ? Commencez dès aujourd'hui à personnaliser votre CMS Creopse !**

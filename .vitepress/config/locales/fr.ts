@@ -65,10 +65,10 @@ export const fr = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     { text: 'Guide', link: '/fr/guide/getting-started' },
-    { text: 'API', link: '/fr/api/' },
+    { text: 'API', link: '/fr/guide/advanced/api-usage' },
     {
       text: 'FAQ',
-      link: '/fr/faq/',
+      link: '/fr/guide/resources/faq',
     },
     {
       text: 'v0.0.7',
@@ -96,17 +96,57 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'Configuration', link: 'configuration' },
       ],
     },
-    /* {
-      text: 'Autres',
-      collapsed: false,
-      items: [{ text: 'A propos', link: 'about' }],
-    }, */
     {
+      text: 'Concepts de base',
       collapsed: false,
       items: [
-        { text: 'FAQ', link: 'faq/' },
-        { text: 'API', link: 'api/' },
+        { text: 'Comprendre Creopse', link: 'core/understanding-creopse' },
       ],
+    },
+    {
+      text: 'Guide d’utilisation',
+      collapsed: false,
+      items: [
+        { text: 'Gestion du contenu', link: 'usage/content-management' },
+        {
+          text: 'Gestion des utilisateurs et rôles',
+          link: 'usage/user-role-management',
+        },
+        { text: 'Gestion des médias', link: 'usage/media-management' },
+      ],
+    },
+    {
+      text: 'Intégration avec le frontend',
+      collapsed: false,
+      items: [
+        { text: 'Utilisation d’Inertia.js', link: 'frontend/inertia' },
+        {
+          text: 'Création de pages personnalisées',
+          link: 'frontend/custom-pages',
+        },
+        { text: 'Thématisation & Style', link: 'frontend/theming' },
+      ],
+    },
+    {
+      text: 'Fonctionnalités avancées',
+      collapsed: false,
+      items: [
+        { text: 'Utilisation de l’API', link: 'advanced/api-usage' },
+        { text: 'Extension de Creopse', link: 'advanced/extending-creopse' },
+        { text: 'Événements & Hooks', link: 'advanced/events-hooks' },
+      ],
+    },
+    {
+      text: 'Déploiement & Maintenance',
+      collapsed: false,
+      items: [
+        { text: 'Mise à jour de Creopse', link: 'deployment/updating-creopse' },
+      ],
+    },
+    {
+      text: 'Ressources',
+      collapsed: false,
+      items: [{ text: 'FAQ', link: 'resources/faq' }],
     },
   ]
 }
