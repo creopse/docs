@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.DxHMuem5.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{"layout":"doc"},"headers":[],"relativePath":"guide/resources/faq.md","filePath":"guide/resources/faq.md"}'),r={name:"guide/resources/faq.md"};function o(s,c,n,d,i,f){return a(),t("div")}const _=e(r,[["render",o]]);export{u as __pageData,_ as default};
