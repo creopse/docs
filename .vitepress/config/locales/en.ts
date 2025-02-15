@@ -38,7 +38,7 @@ function nav(): DefaultTheme.NavItem[] {
       link: '/guide/resources/faq',
     },
     {
-      text: 'v0.0.7',
+      text: 'v0.0.8',
       items: [
         {
           text: 'Changelog',
