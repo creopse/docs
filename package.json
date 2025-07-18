@@ -1,7 +1,7 @@
 {
   "name": "creopse-docs",
   "version": "0.0.8",
-  "description": "",
+  "description": "Creopse documentation",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/creopse/docs#readme",
   "devDependencies": {
-    "gh-pages": "^6.2.0",
-    "vitepress": "^1.5.0"
+    "gh-pages": "^6.3.0",
+    "vitepress": "^1.6.3"
   }
 }
