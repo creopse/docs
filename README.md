@@ -2,4 +2,4 @@
 
 ## About Creopse
 
-Welcome to the **Creopse** documentation! This guide will help you get started with Creopse, a hybrid Content Management System (CMS) built on Laravel 10 and Inertia.
+Welcome to the **Creopse** documentation! This guide will help you get started with Creopse, a hybrid Content Management System (CMS) built on Laravel and Inertia.

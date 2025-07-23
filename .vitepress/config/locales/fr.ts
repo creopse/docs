@@ -71,7 +71,7 @@ function nav(): DefaultTheme.NavItem[] {
       link: '/fr/guide/resources/faq',
     },
     {
-      text: 'v0.0.8',
+      text: 'v0.0.16',
       items: [
         {
           text: 'Journal de modifications',

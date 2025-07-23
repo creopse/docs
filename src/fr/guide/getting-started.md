@@ -4,7 +4,7 @@ layout: doc
 
 # Pour commencer
 
-Bienvenue dans la documentation de **Creopse** ! Ce guide vous aidera à démarrer avec Creopse, un système de gestion de contenu (CMS) hybride basé sur Laravel 10. Suivez les étapes ci-dessous pour installer et commencer à utiliser Creopse rapidement.
+Bienvenue dans la documentation de **Creopse** ! Ce guide vous aidera à démarrer avec Creopse, un système de gestion de contenu (CMS) hybride basé sur Laravel. Suivez les étapes ci-dessous pour installer et commencer à utiliser Creopse rapidement.
 
 ## Prérequis
 
@@ -12,7 +12,7 @@ Avant d'installer Creopse, assurez-vous que votre environnement remplit les cond
 
 ### Configuration système
 
-- Laravel 10
+- Laravel 10 ou 11
 - PHP 8.1 ou supérieur
 - Composer
 - pnpm
@@ -42,6 +42,12 @@ Pour commencer, créez un nouveau projet Laravel :
 
 ```bash
 composer create-project laravel/laravel:^10.0 nom-du-projet
+```
+
+ou
+
+```bash
+composer create-project laravel/laravel:^11.0 nom-du-projet
 ```
 
 Remplacez `nom-du-projet` par le nom souhaité pour le répertoire de votre projet.
