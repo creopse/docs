@@ -12,10 +12,12 @@ Avant d'installer Creopse, assurez-vous que votre environnement remplit les cond
 
 ### Configuration système
 
-- Laravel 10 ou 11
-- PHP 8.1 ou supérieur
-- Composer
-- pnpm
+- **Laravel**: La version 10, 11 ou 12 est requise.
+- **PHP**:
+  - Laravel 10: version minimale 8.1
+  - Laravel 11 & 12: version minimale 8.2
+- **Composer**: Pour gérer les dépendances.
+- **pnpm**: Nécessaire pour gérer et builder les assets frontend.
 
 ### Connaissances requises
 
@@ -40,14 +42,22 @@ Avec ces prérequis en place, vous serez prêt à installer et utiliser **Creops
 
 Pour commencer, créez un nouveau projet Laravel :
 
+**Pour Laravel 10:**
+
 ```bash
 composer create-project laravel/laravel:^10.0 nom-du-projet
 ```
 
-ou
+**Pour Laravel 11:**
 
 ```bash
 composer create-project laravel/laravel:^11.0 nom-du-projet
+```
+
+**Pour Laravel 12:**
+
+```bash
+composer create-project laravel/laravel:^12.0 nom-du-projet
 ```
 
 Remplacez `nom-du-projet` par le nom souhaité pour le répertoire de votre projet.
