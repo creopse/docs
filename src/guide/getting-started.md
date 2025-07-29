@@ -78,11 +78,24 @@ This will add Creopse to your Laravel project.
 
 ### 3. Install Creopse Files
 
-Run the following Artisan command to publish the necessary configuration files and resources:
+Next, publish Creopse's configuration and files by running the following command:
+
+**For using Creopse with Vue template:**
 
 ```bash
-php artisan creopse:install
+php artisan creopse:install -t vue
 ```
+
+**Or with React template:**
+
+```bash
+php artisan creopse:install -t react
+```
+
+This command will:
+
+- Publish necessary configuration files.
+- Set up essential Creopse directories and resources for vue or react frontend.
 
 ---
 
