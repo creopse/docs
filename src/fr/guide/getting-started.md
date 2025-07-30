@@ -78,15 +78,23 @@ Cela ajoutera Creopse à votre projet Laravel.
 
 ### 3. Installer les Fichiers de Creopse
 
-Exécutez la commande Artisan suivante pour publier les fichiers de configuration et les ressources nécessaires :
+Pour mettre en place Creopse dans votre projet, exécutez la commande suivante pour publier sa configuration et les fichiers requis :
 
-**Pour utiliser Creopse avec le template Vue:**
+#### Si [Creopse CLI] (<https://github.com/creopse/cli>) est installé globalement
+
+```bash
+creopse install
+```
+
+#### Sinon, utilisez la commande Laravel Artisan
+
+- Pour un frontend **Vue**:
 
 ```bash
 php artisan creopse:install -t vue
 ```
 
-**Ou avec le template React:**
+- Pour un frontend **React:**
 
 ```bash
 php artisan creopse:install -t react
