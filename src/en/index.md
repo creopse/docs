@@ -11,8 +11,14 @@ hero:
     alt: Creopse
   actions:
     - theme: brand
-      text: Getting started →
-      link: /guide/getting-started
+      text: 🚀 Get Started (Developers) →
+      link: /developers/getting-started
+    - theme: alt
+      text: 📖 User Guide
+      link: /users/getting-started
+    - theme: alt
+      text: 🇫🇷
+      link: /fr/
 
 features:
   - icon: 🧩

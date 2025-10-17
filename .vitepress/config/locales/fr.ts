@@ -9,11 +9,12 @@ export const fr = defineConfig({
     siteTitle: 'Creopse',
 
     sidebar: {
-      '/fr/guide/': { base: '/fr/guide/', items: sidebarGuide() },
+      '/fr/developers/': { base: '/fr/developers/', items: developerDocs() },
+      '/fr/users/': { base: '/fr/users/', items: userGuide() },
     },
 
     footer: {
-      message: 'Released under the MIT License.',
+      message: 'Publié sous la licence MIT.',
       copyright: `Copyright © ${new Date().getFullYear()} <a href="https://edpage.net" target="_blank">edPage</a>`,
     },
 
@@ -64,14 +65,13 @@ export const fr = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
   return [
-    { text: 'Guide', link: '/fr/guide/getting-started' },
-    { text: 'API', link: '/fr/guide/advanced/api-usage' },
     {
-      text: 'FAQ',
-      link: '/fr/guide/resources/faq',
+      text: 'Documentation Développeur',
+      link: '/fr/developers/getting-started',
     },
+    { text: 'Guide Utilisateur', link: '/fr/users/getting-started' },
     {
-      text: 'v0.0.16',
+      text: 'v0.5.0',
       items: [
         {
           text: 'Journal de modifications',
@@ -86,7 +86,7 @@ function nav(): DefaultTheme.NavItem[] {
   ]
 }
 
-function sidebarGuide(): DefaultTheme.SidebarItem[] {
+function developerDocs(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: 'Introduction',
@@ -147,6 +147,16 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'Ressources',
       collapsed: false,
       items: [{ text: 'FAQ', link: 'resources/faq' }],
+    },
+  ]
+}
+
+function userGuide(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Introduction',
+      collapsed: false,
+      items: [{ text: 'Pour commencer', link: 'getting-started' }],
     },
   ]
 }

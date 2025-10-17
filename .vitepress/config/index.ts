@@ -58,4 +58,9 @@ export default defineConfig({
     root: { label: 'English', ...en },
     fr: { label: 'Français', ...fr },
   },
+
+  // Use rewrites to map en/ folder to root paths
+  rewrites: {
+    'en/:rest*': ':rest*',
+  },
 })

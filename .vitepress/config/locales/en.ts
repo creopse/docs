@@ -9,11 +9,12 @@ export const en = defineConfig({
     siteTitle: 'Creopse',
 
     sidebar: {
-      '/guide/': { base: '/guide/', items: sidebarGuide() },
+      '/developers/': { base: '/developers/', items: developerDocs() },
+      '/users/': { base: '/users/', items: userGuide() },
     },
 
     footer: {
-      message: 'Publié sous la licence MIT.',
+      message: 'Released under the MIT License.',
       copyright: `Copyright © ${new Date().getFullYear()} <a href="https://edpage.net" target="_blank">edPage</a>`,
     },
 
@@ -31,14 +32,10 @@ export const en = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
   return [
-    { text: 'Guide', link: '/guide/getting-started' },
-    { text: 'API', link: '/guide/advanced/api-usage' },
+    { text: 'Developer Docs', link: '/developers/getting-started' },
+    { text: 'User Guide', link: '/users/getting-started' },
     {
-      text: 'FAQ',
-      link: '/guide/resources/faq',
-    },
-    {
-      text: 'v0.0.16',
+      text: 'v0.5.0',
       items: [
         {
           text: 'Changelog',
@@ -53,7 +50,7 @@ function nav(): DefaultTheme.NavItem[] {
   ]
 }
 
-function sidebarGuide(): DefaultTheme.SidebarItem[] {
+function developerDocs(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: 'Introduction',
@@ -108,6 +105,16 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       text: 'Resources',
       collapsed: false,
       items: [{ text: 'FAQ', link: 'resources/faq' }],
+    },
+  ]
+}
+
+function userGuide(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Introduction',
+      collapsed: false,
+      items: [{ text: 'Getting started', link: 'getting-started' }],
     },
   ]
 }

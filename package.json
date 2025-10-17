@@ -1,6 +1,6 @@
 {
   "name": "creopse-docs",
-  "version": "0.0.16",
+  "version": "0.5.0",
   "description": "Creopse documentation",
   "type": "module",
   "scripts": {
@@ -22,6 +22,6 @@
   "homepage": "https://github.com/creopse/docs#readme",
   "devDependencies": {
     "gh-pages": "^6.3.0",
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.4"
   }
 }
