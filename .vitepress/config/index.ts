@@ -21,6 +21,22 @@ export default defineConfig({
         href: '/docs/images/creopse-icon.svg',
       },
     ],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    [
+      'link',
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'true',
+      },
+    ],
+    [
+      'link',
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap',
+        rel: 'stylesheet',
+      },
+    ],
     ['meta', { name: 'theme-color', content: '#4EC4E3' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:locale', content: 'fr' }],

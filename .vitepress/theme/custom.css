@@ -3,8 +3,31 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #005b97,
-    #1e9bd7,
-    #005b97
+    #00c6ff,
+    #00d4ff,
+    #0072ff
   );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    rgba(0, 198, 255, 0.15),
+    rgba(0, 114, 255, 0.15),
+    rgba(0, 198, 255, 0.1)
+  );
+  --vp-home-hero-image-filter: blur(12px) brightness(0.96);
+}
+
+.dark {
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    rgba(0, 20, 50, 0.6),
+    rgba(0, 40, 90, 0.55),
+    rgba(0, 20, 50, 0.5)
+  );
+  --vp-home-hero-image-filter: blur(12px) brightness(1.05);
+}
+
+body,
+html {
+  font-family: 'Raleway', sans-serif;
 }
