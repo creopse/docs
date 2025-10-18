@@ -151,6 +151,6 @@ Connectez-vous avec les identifiants que vous avez configurés (ou les identifia
 Explorez les sections suivantes pour en savoir plus sur Creopse :
 
 - [Configuration](./configuration.md) : Personnalisez les paramètres de Creopse selon vos besoins.
-- [Référence API](./advanced/api-usage.md) : Découvrez les points de terminaison et les APIs disponibles pour votre projet.
+- [Référence API](./development/api-endpoints.md) : Découvrez les endpoints et les APIs disponibles pour votre projet.
 
 **Prêt à aller plus loin ? Commencez dès aujourd'hui à personnaliser votre CMS Creopse !**

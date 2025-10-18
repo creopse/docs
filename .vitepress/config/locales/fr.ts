@@ -100,53 +100,89 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
       text: 'Concepts de base',
       collapsed: false,
       items: [
-        { text: 'Comprendre Creopse', link: 'core/understanding-creopse' },
+        {
+          text: 'Comprendre Creopse',
+          link: 'core-concepts/understanding-creopse',
+        },
       ],
     },
     {
-      text: 'Guide d’utilisation',
+      text: "Panneau d'administration",
       collapsed: false,
       items: [
-        { text: 'Gestion du contenu', link: 'usage/content-management' },
+        {
+          text: 'Gestion du contenu',
+          link: 'admin-panel/content-management/getting-started',
+          items: [
+            {
+              text: 'Identité de la plateforme',
+              link: 'admin-panel/content-management/platform-identity',
+            },
+            {
+              text: 'Menus',
+              link: 'admin-panel/content-management/menus',
+            },
+            {
+              text: 'Pages',
+              link: 'admin-panel/content-management/pages',
+            },
+            {
+              text: 'Modèles de contenu',
+              link: 'admin-panel/content-management/content-models',
+            },
+            {
+              text: 'Permaliens',
+              link: 'admin-panel/content-management/permalinks',
+            },
+            {
+              text: 'Newsletter',
+              link: 'admin-panel/content-management/newsletter',
+            },
+            {
+              text: 'Publicités',
+              link: 'admin-panel/content-management/ads',
+            },
+            {
+              text: 'Vidéos',
+              link: 'admin-panel/content-management/videos',
+            },
+          ],
+        },
         {
           text: 'Gestion des utilisateurs et rôles',
-          link: 'usage/user-role-management',
+          link: 'admin-panel/user-role-management',
         },
-        { text: 'Gestion des médias', link: 'usage/media-management' },
+        { text: 'Gestion des médias', link: 'admin-panel/media-management' },
+        { text: 'Plugins', link: 'admin-panel/plugins' },
+        { text: 'Personalisation', link: 'admin-panel/customization' },
       ],
     },
     {
-      text: 'Intégration avec le frontend',
+      text: 'Développement',
       collapsed: false,
       items: [
-        { text: 'Utilisation d’Inertia.js', link: 'frontend/inertia' },
         {
-          text: 'Création de pages personnalisées',
-          link: 'frontend/custom-pages',
+          text: 'Structure du projet',
+          link: 'development/project-structure',
         },
-        { text: 'Thématisation & Style', link: 'frontend/theming' },
-      ],
-    },
-    {
-      text: 'Fonctionnalités avancées',
-      collapsed: false,
-      items: [
-        { text: 'Utilisation de l’API', link: 'advanced/api-usage' },
-        { text: 'Extension de Creopse', link: 'advanced/extending-creopse' },
-        { text: 'Événements & Hooks', link: 'advanced/events-hooks' },
-      ],
-    },
-    {
-      text: 'Déploiement & Maintenance',
-      collapsed: false,
-      items: [
-        { text: 'Mise à jour de Creopse', link: 'deployment/updating-creopse' },
+        { text: 'Sections & Widgets', link: 'development/sections-widgets' },
+        { text: 'Modèles de contenu', link: 'development/content-models' },
+        { text: 'Utilitaires', link: 'development/utilities' },
+        { text: 'Authentification', link: 'development/authentication' },
+        { text: 'API & Endpoints', link: 'development/api-endpoints' },
+        {
+          text: 'Mise à jour de Creopse',
+          link: 'development/updating-creopse',
+        },
       ],
     },
     {
       text: 'Ressources',
       collapsed: false,
-      items: [{ text: 'FAQ', link: 'resources/faq' }],
+      items: [
+        { text: 'CLI', link: 'resources/cli' },
+        { text: 'FAQ', link: 'resources/faq' },
+      ],
     },
   ]
 }
