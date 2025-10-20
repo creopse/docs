@@ -1,12 +1,11 @@
-import { defineConfig } from 'vitepress'
+import { defineVersionedConfig } from '@viteplus/versions'
 
 import { en } from './locales/en'
 import { fr, search as frSearch } from './locales/fr'
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default defineVersionedConfig({
   base: '/docs/',
-  srcDir: './src',
+
   outDir: './.vitepress/build',
 
   title: 'Creopse',
@@ -70,13 +69,14 @@ export default defineConfig({
       },
     ],
   },
+
   locales: {
-    root: { label: 'English', ...en },
-    fr: { label: 'Français', ...fr },
+    root: en,
+    fr,
   },
 
-  // Use rewrites to map en/ folder to root paths
-  rewrites: {
-    'en/:rest*': ':rest*',
+  versionsConfig: {
+    // ...
+    versionSwitcher: false,
   },
 })

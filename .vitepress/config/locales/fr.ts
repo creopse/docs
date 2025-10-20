@@ -1,7 +1,8 @@
-import { type DefaultTheme, defineConfig } from 'vitepress'
+import { type DefaultTheme } from '@viteplus/versions'
 
-export const fr = defineConfig({
-  lang: 'fr-FR',
+export const fr = {
+  lang: 'fr',
+  label: 'Français',
   description: 'Documentation de Creopse.',
 
   themeConfig: {
@@ -9,8 +10,8 @@ export const fr = defineConfig({
     siteTitle: 'Creopse',
 
     sidebar: {
-      '/fr/developers/': { base: '/fr/developers/', items: developerDocs() },
-      '/fr/users/': { base: '/fr/users/', items: userGuide() },
+      '/developers/': { base: '/developers/', items: developerDocs() },
+      '/users/': { base: '/users/', items: userGuide() },
     },
 
     footer: {
@@ -19,7 +20,7 @@ export const fr = defineConfig({
     },
 
     editLink: {
-      pattern: ({ filePath }) => {
+      pattern: ({ filePath }: { filePath: string }) => {
         return `https://github.com/creopse/docs/edit/master/src/${filePath.replace(
           '/docs',
           ''
@@ -40,8 +41,8 @@ export const fr = defineConfig({
     lastUpdated: {
       text: 'Mis à jour le',
       formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'short',
+        dateStyle: 'short' as const,
+        timeStyle: 'short' as const,
       },
     },
 
@@ -61,29 +62,58 @@ export const fr = defineConfig({
       code: '404',
     },
   },
-})
+}
 
-function nav(): DefaultTheme.NavItem[] {
-  return [
-    {
-      text: 'Documentation Développeur',
-      link: '/fr/developers/getting-started',
-    },
-    { text: 'Guide Utilisateur', link: '/fr/users/getting-started' },
-    {
-      text: 'v0.5.0',
-      items: [
-        {
-          text: 'Journal de modifications',
-          link: 'https://github.com/creopse/creopse/releases',
+export const search: DefaultTheme.LocalSearchOptions['locales'] = {
+  fr: {
+    translations: {
+      button: {
+        buttonText: 'Rechercher',
+        buttonAriaLabel: 'Rechercher',
+      },
+      modal: {
+        displayDetails: 'Afficher la liste détaillée',
+        backButtonTitle: 'Retour',
+        noResultsText: "Aucun résultat n'a été trouvé",
+        resetButtonTitle: 'Réinitialiser la recherche',
+        footer: {
+          selectText: 'sélectionner',
+          navigateText: 'naviguer',
+          closeText: 'fermer',
         },
-        {
-          text: 'Signaler un bug',
-          link: 'https://github.com/creopse/creopse/issues',
-        },
-      ],
+      },
     },
-  ]
+  },
+}
+
+function nav() {
+  return {
+    root: [
+      {
+        text: 'Documentation Développeur',
+        link: '/developers/getting-started',
+      },
+      { text: 'Guide Utilisateur', link: '/users/getting-started' },
+      {
+        text: 'Support & Mises à jour',
+        items: [
+          {
+            text: 'Journal de modifications',
+            link: 'https://github.com/creopse/creopse/releases',
+            target: '_blank',
+            rel: 'noopener',
+          },
+          {
+            text: 'Signaler un bug',
+            link: 'https://github.com/creopse/creopse/issues',
+            target: '_blank',
+            rel: 'noopener',
+          },
+        ],
+      },
+      { component: 'VersionSwitcher' },
+    ],
+  }
 }
 
 function developerDocs(): DefaultTheme.SidebarItem[] {
@@ -195,26 +225,4 @@ function userGuide(): DefaultTheme.SidebarItem[] {
       items: [{ text: 'Pour commencer', link: 'getting-started' }],
     },
   ]
-}
-
-export const search: DefaultTheme.LocalSearchOptions['locales'] = {
-  fr: {
-    translations: {
-      button: {
-        buttonText: 'Rechercher',
-        buttonAriaLabel: 'Rechercher',
-      },
-      modal: {
-        displayDetails: 'Afficher la liste détaillée',
-        backButtonTitle: 'Retour',
-        noResultsText: "Aucun résultat n'a été trouvé",
-        resetButtonTitle: 'Réinitialiser la recherche',
-        footer: {
-          selectText: 'sélectionner',
-          navigateText: 'naviguer',
-          closeText: 'fermer',
-        },
-      },
-    },
-  },
 }

@@ -18,7 +18,7 @@ hero:
       link: /fr/users/getting-started
     - theme: alt
       text: 🇬🇧
-      link: /en/
+      link: /
 
 features:
   - icon: 🧩

@@ -1,7 +1,8 @@
-import { type DefaultTheme, defineConfig } from 'vitepress'
+import { type DefaultTheme } from '@viteplus/versions'
 
-export const en = defineConfig({
-  lang: 'en-US',
+export const en = {
+  lang: 'en',
+  label: 'English',
   description: 'Creopse documentation.',
 
   themeConfig: {
@@ -19,7 +20,7 @@ export const en = defineConfig({
     },
 
     editLink: {
-      pattern: ({ filePath }) => {
+      pattern: ({ filePath }: { filePath: string }) => {
         return `https://github.com/creopse/docs/edit/master/src/${filePath.replace(
           '/docs',
           ''
@@ -28,26 +29,33 @@ export const en = defineConfig({
       text: 'Suggest changes to this page',
     },
   },
-})
+}
 
-function nav(): DefaultTheme.NavItem[] {
-  return [
-    { text: 'Developer Docs', link: '/developers/getting-started' },
-    { text: 'User Guide', link: '/users/getting-started' },
-    {
-      text: 'v0.5.0',
-      items: [
-        {
-          text: 'Changelog',
-          link: 'https://github.com/creopse/creopse/releases',
-        },
-        {
-          text: 'Report a bug',
-          link: 'https://github.com/creopse/creopse/issues',
-        },
-      ],
-    },
-  ]
+function nav() {
+  return {
+    root: [
+      { text: 'Developer Docs', link: '/developers/getting-started' },
+      { text: 'User Guide', link: '/users/getting-started' },
+      {
+        text: 'Support & Updates',
+        items: [
+          {
+            text: 'Changelog',
+            link: 'https://github.com/creopse/creopse/releases',
+            target: '_blank',
+            rel: 'noopener',
+          },
+          {
+            text: 'Report a bug',
+            link: 'https://github.com/creopse/creopse/issues',
+            target: '_blank',
+            rel: 'noopener',
+          },
+        ],
+      },
+      { component: 'VersionSwitcher' },
+    ],
+  }
 }
 
 function developerDocs(): DefaultTheme.SidebarItem[] {

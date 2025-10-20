@@ -23,5 +23,8 @@
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "@viteplus/versions": "^2.0.4"
   }
 }
