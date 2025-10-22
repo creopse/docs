@@ -25,6 +25,6 @@
     "vitepress": "^1.6.4"
   },
   "dependencies": {
-    "@viteplus/versions": "^2.0.4"
+    "@viteplus/versions": "^2.0.6"
   }
 }
