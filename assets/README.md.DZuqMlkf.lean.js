@@ -1,0 +1,1 @@
+import{_ as t,m as a,k as o,ah as r}from"./chunks/framework.DXshGYTm.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),s={name:"README.md"};function n(i,e,c,p,l,_){return o(),a("div",null,[...e[0]||(e[0]=[r("",3)])])}const m=t(s,[["render",n]]);export{h as __pageData,m as default};
