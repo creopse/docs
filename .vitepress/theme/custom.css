@@ -1,33 +1,249 @@
 /* .vitepress/theme/custom.css */
+
+/* ─────────────────────────────────────────────
+   Fonts
+───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ─────────────────────────────────────────────
+   Brand tokens — light mode
+───────────────────────────────────────────── */
 :root {
+  /* Brand */
+  --vp-c-brand-1: #0080f5;
+  --vp-c-brand-2: #006bdd;
+  --vp-c-brand-3: #0052b8;
+  --vp-c-brand-soft: rgba(0, 128, 245, 0.1);
+
+  /* Surfaces */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f3f7fd;
+  --vp-c-bg-mute: #e8eef9;
+  --vp-c-bg-elv: #ffffff;
+
+  /* Borders */
+  --vp-c-border: #c9d6ec;
+  --vp-c-divider: #dce6f5;
+  --vp-c-gutter: #e8eef9;
+
+  /* Text */
+  --vp-c-text-1: #0f1c35;
+  --vp-c-text-2: #3a4e6e;
+  --vp-c-text-3: #6b7fa0;
+
+  /* Typography */
+  --vp-font-family-base: 'Raleway', sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Nav */
+  --vp-nav-bg-color: rgba(255, 255, 255, 0.85);
+  --vp-nav-logo-height: 24px;
+
+  /* Sidebar */
+  --vp-sidebar-bg-color: #f3f7fd;
+  --vp-sidebar-width: 272px;
+
+  /* Code inline */
+  --vp-code-color: #0062cc;
+  --vp-code-bg: rgba(0, 128, 245, 0.07);
+  --vp-code-font-size: 0.875em;
+
+  /* Code blocks */
+  --vp-code-block-bg: #f6f9fe;
+  --vp-code-line-highlight-color: rgba(0, 128, 245, 0.08);
+  --vp-code-copy-code-hover-bg: rgba(0, 128, 245, 0.06);
+
+  /* Buttons */
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #ffffff;
+  --vp-button-brand-active-bg: var(--vp-c-brand-3);
+
+  /* Hero */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #00c6ff,
-    #00d4ff,
-    #0072ff
+  --vp-home-hero-name-background: linear-gradient(
+    125deg,
+    #00c6ff 0%,
+    #0080f5 60%,
+    #0052b8 100%
   );
+  --vp-home-hero-image-background-image: radial-gradient(
+    ellipse at 60% 40%,
+    rgba(0, 198, 255, 0.18),
+    rgba(0, 128, 245, 0.14),
+    transparent 70%
+  );
+  --vp-home-hero-image-filter: blur(14px);
 
-  --vp-home-hero-image-background-image: linear-gradient(
-    135deg,
-    rgba(0, 198, 255, 0.15),
-    rgba(0, 114, 255, 0.15),
-    rgba(0, 198, 255, 0.1)
-  );
-  --vp-home-hero-image-filter: blur(12px) brightness(0.96);
+  /* Custom: badge pill bg */
+  --vp-badge-tip-bg: rgba(0, 128, 245, 0.1);
+  --vp-badge-tip-text: var(--vp-c-brand-1);
 }
 
+/* ─────────────────────────────────────────────
+   Brand tokens — dark mode
+───────────────────────────────────────────── */
 .dark {
-  --vp-home-hero-image-background-image: linear-gradient(
-    135deg,
-    rgba(0, 20, 50, 0.6),
-    rgba(0, 40, 90, 0.55),
-    rgba(0, 20, 50, 0.5)
+  /* Brand — légèrement plus lumineux sur fond sombre */
+  --vp-c-brand-1: #3d9eff;
+  --vp-c-brand-2: #5aadff;
+  --vp-c-brand-3: #74bcff;
+  --vp-c-brand-soft: rgba(61, 158, 255, 0.12);
+
+  /* Surfaces — dark navy, pas le gris default */
+  --vp-c-bg: #07101f;
+  --vp-c-bg-soft: #0c1828;
+  --vp-c-bg-mute: #111f32;
+  --vp-c-bg-elv: #0c1828;
+
+  /* Borders */
+  --vp-c-border: #1b2d4a;
+  --vp-c-divider: #162340;
+  --vp-c-gutter: #0c1828;
+
+  /* Text */
+  --vp-c-text-1: #dae6f8;
+  --vp-c-text-2: #8aafd4;
+  --vp-c-text-3: #4f7099;
+
+  /* Nav */
+  --vp-nav-bg-color: rgba(7, 16, 31, 0.85);
+
+  /* Sidebar */
+  --vp-sidebar-bg-color: #0a1525;
+
+  /* Code inline */
+  --vp-code-color: #62b8ff;
+  --vp-code-bg: rgba(61, 158, 255, 0.1);
+
+  /* Code blocks */
+  --vp-code-block-bg: #060f1e;
+  --vp-code-line-highlight-color: rgba(61, 158, 255, 0.09);
+  --vp-code-copy-code-hover-bg: rgba(61, 158, 255, 0.08);
+
+  /* Buttons */
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+
+  /* Hero */
+  --vp-home-hero-image-background-image: radial-gradient(
+    ellipse at 60% 40%,
+    rgba(0, 60, 120, 0.55),
+    rgba(0, 30, 80, 0.45),
+    transparent 70%
   );
-  --vp-home-hero-image-filter: blur(12px) brightness(1.05);
+  --vp-home-hero-image-filter: blur(14px) brightness(1.08);
+
+  /* Badge */
+  --vp-badge-tip-bg: rgba(61, 158, 255, 0.12);
+  --vp-badge-tip-text: var(--vp-c-brand-1);
 }
 
-body,
-html {
-  font-family: 'Raleway', sans-serif;
+/* ─────────────────────────────────────────────
+   Layout & Nav
+───────────────────────────────────────────── */
+.VPNav {
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* ─────────────────────────────────────────────
+   Sidebar
+───────────────────────────────────────────── */
+.VPSidebar {
+  border-right: 1px solid var(--vp-c-divider) !important;
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--vp-c-text-3);
+}
+
+/* Active sidebar item highlight */
+.VPSidebarItem.is-active > .item {
+  background: var(--vp-c-brand-soft);
+  border-radius: 6px;
+}
+.VPSidebarItem.is-active > .item .link .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────
+   Code
+───────────────────────────────────────────── */
+div[class*='language-'] {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 10px;
+}
+
+.dark div[class*='language-'] {
+  border-color: var(--vp-c-border);
+}
+
+/* filename/lang badge */
+div[class*='language-'] > span.lang {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
+  opacity: 0.45;
+  letter-spacing: 0.04em;
+}
+
+/* ─────────────────────────────────────────────
+   Content typography
+───────────────────────────────────────────── */
+.vp-doc h1 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.vp-doc h2 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.vp-doc a {
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+/* ─────────────────────────────────────────────
+   Scrollbar (Webkit)
+───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-soft);
 }

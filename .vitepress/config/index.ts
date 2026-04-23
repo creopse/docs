@@ -43,6 +43,8 @@ export default defineVersionedConfig({
     ['meta', { property: 'og:site_name', content: 'Creopse' }],
   ],
 
+  appearance: 'dark',
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
@@ -76,7 +78,12 @@ export default defineVersionedConfig({
   },
 
   versionsConfig: {
-    // ...
-    versionSwitcher: false,
+    current: '1.0.0',
+    sources: 'src',
+    archive: 'archive',
+    versionSwitcher: {
+      text: 'Version',
+      includeCurrentVersion: true,
+    },
   },
 })
