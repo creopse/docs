@@ -78,7 +78,7 @@ export default defineVersionedConfig({
   },
 
   versionsConfig: {
-    current: '1.0.0',
+    current: '1.x.x',
     sources: 'src',
     archive: 'archive',
     versionSwitcher: {

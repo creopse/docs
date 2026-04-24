@@ -23,7 +23,7 @@ export const fr = {
       pattern: ({ filePath }: { filePath: string }) => {
         return `https://github.com/creopse/docs/edit/master/src/${filePath.replace(
           '/docs',
-          ''
+          '',
         )}`
       },
       text: 'Suggérer des modifications à cette page',
@@ -119,25 +119,40 @@ function nav() {
 function developerDocs(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Introduction',
+      text: 'Pour commencer',
       collapsed: false,
       items: [
-        { text: 'Pour commencer', link: 'getting-started' },
-        { text: 'Configuration', link: 'configuration' },
+        { text: "Qu'est-ce que Creopse?", link: 'getting-started' },
+        { text: 'Concepts de base', link: 'core-concepts' },
+        { text: 'Installation', link: 'installation' },
       ],
     },
     {
-      text: 'Concepts de base',
+      text: 'Développement',
       collapsed: false,
       items: [
         {
-          text: 'Comprendre Creopse',
-          link: 'core-concepts/understanding-creopse',
+          text: 'Structure du template',
+          link: 'development/template-structure',
+        },
+        { text: 'Sections & Widgets', link: 'development/sections-widgets' },
+        { text: 'Modèles de contenu', link: 'development/content-models' },
+        { text: 'Utilitaires', link: 'development/utilities' },
+        { text: 'Authentification', link: 'development/authentication' },
+        { text: 'API & Endpoints', link: 'development/api-endpoints' },
+        {
+          text: 'Mise à jour de Creopse',
+          link: 'development/updating-creopse',
         },
       ],
     },
     {
-      text: "Panneau d'administration",
+      text: 'Déploiement',
+      collapsed: false,
+      items: [{ text: 'Production', link: 'deployment/production' }],
+    },
+    {
+      text: "Interface d'administration",
       collapsed: false,
       items: [
         {
@@ -185,25 +200,6 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
         { text: 'Gestion des médias', link: 'admin-panel/media-management' },
         { text: 'Plugins', link: 'admin-panel/plugins' },
         { text: 'Personalisation', link: 'admin-panel/customization' },
-      ],
-    },
-    {
-      text: 'Développement',
-      collapsed: false,
-      items: [
-        {
-          text: 'Structure du projet',
-          link: 'development/project-structure',
-        },
-        { text: 'Sections & Widgets', link: 'development/sections-widgets' },
-        { text: 'Modèles de contenu', link: 'development/content-models' },
-        { text: 'Utilitaires', link: 'development/utilities' },
-        { text: 'Authentification', link: 'development/authentication' },
-        { text: 'API & Endpoints', link: 'development/api-endpoints' },
-        {
-          text: 'Mise à jour de Creopse',
-          link: 'development/updating-creopse',
-        },
       ],
     },
     {

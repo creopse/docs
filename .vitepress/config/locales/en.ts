@@ -23,7 +23,7 @@ export const en = {
       pattern: ({ filePath }: { filePath: string }) => {
         return `https://github.com/creopse/docs/edit/master/src/${filePath.replace(
           '/docs',
-          ''
+          '',
         )}`
       },
       text: 'Suggest changes to this page',
@@ -61,22 +61,31 @@ function nav() {
 function developerDocs(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Introduction',
+      text: 'Getting started',
       collapsed: false,
       items: [
-        { text: 'Getting started', link: 'getting-started' },
-        { text: 'Configuration', link: 'configuration' },
+        { text: 'What is Creopse?', link: 'getting-started' },
+        { text: 'Core concepts', link: 'core-concepts' },
+        { text: 'Installation', link: 'installation' },
       ],
     },
     {
-      text: 'Core Concepts',
+      text: 'Development',
       collapsed: false,
       items: [
-        {
-          text: 'Understanding Creopse',
-          link: 'core-concepts/understanding-creopse',
-        },
+        { text: 'Template structure', link: 'development/template-structure' },
+        { text: 'Sections & Widgets', link: 'development/sections-widgets' },
+        { text: 'Content models', link: 'development/content-models' },
+        { text: 'Utilities', link: 'development/utilities' },
+        { text: 'Authentication', link: 'development/authentication' },
+        { text: 'API & Endpoints', link: 'development/api-endpoints' },
+        { text: 'Updating Creopse', link: 'development/updating-creopse' },
       ],
+    },
+    {
+      text: 'Deployment',
+      collapsed: false,
+      items: [{ text: 'Production', link: 'deployment/production' }],
     },
     {
       text: 'Administration panel',
@@ -127,19 +136,6 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
         { text: 'Media management', link: 'admin-panel/media-management' },
         { text: 'Plugins', link: 'admin-panel/plugins' },
         { text: 'Customization', link: 'admin-panel/customization' },
-      ],
-    },
-    {
-      text: 'Development',
-      collapsed: false,
-      items: [
-        { text: 'Project structure', link: 'development/project-structure' },
-        { text: 'Sections & Widgets', link: 'development/sections-widgets' },
-        { text: 'Content models', link: 'development/content-models' },
-        { text: 'Utilities', link: 'development/utilities' },
-        { text: 'Authentication', link: 'development/authentication' },
-        { text: 'API & Endpoints', link: 'development/api-endpoints' },
-        { text: 'Updating Creopse', link: 'development/updating-creopse' },
       ],
     },
     {
