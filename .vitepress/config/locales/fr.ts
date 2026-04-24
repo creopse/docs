@@ -7,7 +7,7 @@ export const fr = {
 
   themeConfig: {
     nav: nav(),
-    siteTitle: 'Creopse',
+    siteTitle: false as const,
 
     sidebar: {
       '/developers/': { base: '/developers/', items: developerDocs() },
