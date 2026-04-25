@@ -150,7 +150,7 @@ Log in using the credentials you configured (or the default credentials if provi
 
 Explore the following sections to learn more about Creopse:
 
-- [Configuration](./configuration.md): Customize Creopse settings to suit your needs.
-- [API Reference](./development/api-endpoints.md): Understand the available endpoints and APIs for your project.
+- [Core concepts](./core-concepts.md): Understand the core concepts of Creopse.
+- [Installation](./installation.md): Learn how to install and configure Creopse.
 
 **Ready to dive deeper? Start customizing your Creopse CMS today!**

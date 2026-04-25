@@ -150,7 +150,7 @@ Connectez-vous avec les identifiants que vous avez configurés (ou les identifia
 
 Explorez les sections suivantes pour en savoir plus sur Creopse :
 
-- [Configuration](./configuration.md) : Personnalisez les paramètres de Creopse selon vos besoins.
-- [Référence API](./development/api-endpoints.md) : Découvrez les endpoints et les APIs disponibles pour votre projet.
+- [Concepts de base](./core-concepts.md): Comprendre les concepts fondamentaux de Creopse.
+- [Installation](./installation.md): Apprendre comment installer et utiliser Creopse.
 
 **Prêt à aller plus loin ? Commencez dès aujourd'hui à personnaliser votre CMS Creopse !**

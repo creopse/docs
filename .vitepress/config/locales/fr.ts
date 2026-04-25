@@ -200,6 +200,7 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
         { text: 'Gestion des médias', link: 'admin-panel/media-management' },
         { text: 'Plugins', link: 'admin-panel/plugins' },
         { text: 'Personalisation', link: 'admin-panel/customization' },
+        { text: 'Configuration', link: 'admin-panel/configuration' },
       ],
     },
     {

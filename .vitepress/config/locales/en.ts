@@ -136,6 +136,7 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
         { text: 'Media management', link: 'admin-panel/media-management' },
         { text: 'Plugins', link: 'admin-panel/plugins' },
         { text: 'Customization', link: 'admin-panel/customization' },
+        { text: 'Configuration', link: 'admin-panel/configuration' },
       ],
     },
     {
