@@ -17,7 +17,7 @@ export default defineVersionedConfig({
         rel: 'icon',
         type: 'image/svg+xml',
         sizes: 'any',
-        href: '/docs/images/creopse-icon.svg',
+        href: '/docs/images/brands/creopse-icon.svg',
       },
     ],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
@@ -48,8 +48,8 @@ export default defineVersionedConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
-      light: '/images/creopse-logo.svg',
-      dark: '/images/creopse-logo.svg',
+      light: '/images/brands/creopse-logo.svg',
+      dark: '/images/brands/creopse-logo.svg',
       alt: 'Creopse',
     },
 

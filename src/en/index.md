@@ -6,8 +6,8 @@ hero:
   name: Documentation
   tagline: Creopse is a hybrid Content Management System (CMS).
   image:
-    light: /images/creopse-icon.svg
-    dark: /images/creopse-icon.svg
+    light: /images/brands/creopse-icon.svg
+    dark: /images/brands/creopse-icon.svg
     alt: Creopse
   actions:
     - theme: brand
