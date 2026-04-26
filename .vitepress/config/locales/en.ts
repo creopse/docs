@@ -34,7 +34,10 @@ export const en = {
 function nav() {
   return {
     root: [
-      { text: 'Developer Docs', link: '/developers/getting-started' },
+      {
+        text: 'Developer Docs',
+        link: '/developers/getting-started/introduction',
+      },
       { text: 'User Guide', link: '/users/getting-started' },
       {
         text: 'Support & Updates',
@@ -64,9 +67,9 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
       text: 'Getting started',
       collapsed: false,
       items: [
-        { text: 'What is Creopse?', link: 'getting-started' },
-        { text: 'Core concepts', link: 'core-concepts' },
-        { text: 'Installation', link: 'installation' },
+        { text: 'Introduction', link: 'getting-started/introduction' },
+        { text: 'Core concepts', link: 'getting-started/core-concepts' },
+        { text: 'Installation', link: 'getting-started/installation' },
       ],
     },
     {

@@ -91,7 +91,7 @@ function nav() {
     root: [
       {
         text: 'Documentation Développeur',
-        link: '/developers/getting-started',
+        link: '/developers/getting-started/introduction',
       },
       { text: 'Guide Utilisateur', link: '/users/getting-started' },
       {
@@ -122,9 +122,9 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
       text: 'Pour commencer',
       collapsed: false,
       items: [
-        { text: "Qu'est-ce que Creopse?", link: 'getting-started' },
-        { text: 'Concepts de base', link: 'core-concepts' },
-        { text: 'Installation', link: 'installation' },
+        { text: 'Introduction', link: 'getting-started/introduction' },
+        { text: 'Concepts de base', link: 'getting-started/core-concepts' },
+        { text: 'Installation', link: 'getting-started/installation' },
       ],
     },
     {

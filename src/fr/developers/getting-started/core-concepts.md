@@ -2,4 +2,4 @@
 layout: doc
 ---
 
-# Core concepts
+# Concepts de base

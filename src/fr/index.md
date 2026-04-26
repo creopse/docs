@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 🚀 Commencer (Développeurs) →
-      link: /fr/developers/getting-started
+      link: /fr/developers/getting-started/introduction
     - theme: alt
       text: 📖 Guide Utilisateur
       link: /fr/users/getting-started
