@@ -12,7 +12,8 @@ The basic building block of Creopse is the section, which can be defined as a co
 
 Pages in Creopse are stacks of sections whose position and content can be modified. Each page can contain as many sections as needed, and the content of each section is bound to the page it sits on. The same section can therefore be used across multiple pages with different content, or appear multiple times on the same page. It is also possible to bind a section's content to its content on another page.
 
-![Section / Page relationship](/images/core-concepts/section_page_relation_en.svg)
+![Section / Page relationship](/images/core-concepts/section-page-relation-en-light.svg#light-only)
+![Section / Page relationship](/images/core-concepts/section-page-relation-en-dark.svg#dark-only)
 
 ## Content models
 
@@ -32,4 +33,5 @@ Components used to retrieve simple content data, such as a title, an image, a te
 
 Components used to retrieve complex and repetitive content data, such as a list of team members, a list of customer testimonials, etc.
 
-![Singleton vs Collection](/images/core-concepts/singleton_vs_collection_en.svg)
+![Singleton vs Collection](/images/core-concepts/singleton-vs-collection-en-light.svg#light-only)
+![Singleton vs Collection](/images/core-concepts/singleton-vs-collection-en-dark.svg#dark-only)
