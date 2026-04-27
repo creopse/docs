@@ -15,7 +15,7 @@ export const fr = {
     },
 
     footer: {
-      message: 'Publié sous la licence MIT.',
+      // message: 'Publié sous la licence MIT.',
       copyright: `Copyright © ${new Date().getFullYear()} <a href="https://edpage.net" target="_blank">edPage</a>`,
     },
 
