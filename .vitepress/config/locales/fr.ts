@@ -98,10 +98,8 @@ function nav() {
         text: 'Support & Mises à jour',
         items: [
           {
-            text: 'Journal de modifications',
-            link: 'https://github.com/creopse/creopse/releases',
-            target: '_blank',
-            rel: 'noopener',
+            text: 'Notes de version',
+            link: 'changelog',
           },
           {
             text: 'Signaler un bug',

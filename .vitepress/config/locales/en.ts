@@ -44,9 +44,7 @@ function nav() {
         items: [
           {
             text: 'Changelog',
-            link: 'https://github.com/creopse/creopse/releases',
-            target: '_blank',
-            rel: 'noopener',
+            link: 'changelog',
           },
           {
             text: 'Report a bug',
