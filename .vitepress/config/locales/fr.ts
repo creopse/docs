@@ -99,7 +99,7 @@ function nav() {
         items: [
           {
             text: 'Notes de version',
-            link: 'changelog',
+            link: 'release-notes',
           },
           {
             text: 'Signaler un bug',

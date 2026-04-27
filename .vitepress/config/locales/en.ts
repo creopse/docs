@@ -43,8 +43,8 @@ function nav() {
         text: 'Support & Updates',
         items: [
           {
-            text: 'Changelog',
-            link: 'changelog',
+            text: 'Release notes',
+            link: 'release-notes',
           },
           {
             text: 'Report a bug',

@@ -1,4 +1,4 @@
-# Changelog
+# Release notes
 
 ## Latest Releases (v0.8.x) — April 2026
 
