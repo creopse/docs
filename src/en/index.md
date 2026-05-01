@@ -22,11 +22,11 @@ hero:
 
 features:
   - icon:
-      src: /icons/content.svg
+      src: /icons/content-1.svg
     title: Agile content management
     details: Write, organize, and publish various types of content from an intuitive interface. From creation to publication, the workflow is built for speed.
   - icon:
-      src: /icons/presentation.svg
+      src: /icons/presentation-1.svg
     title: Fully free presentation
     details: Design your frontend however you see fit. Creopse delivers your content without imposing any visual structure — your design, your rules.
   - icon:
@@ -34,3 +34,5 @@ features:
     title: Modular by nature
     details: Extend Creopse at will with its plugin system. Every feature can be added, removed, or customized without touching the core system.
 ---
+
+<AdminShowcase />

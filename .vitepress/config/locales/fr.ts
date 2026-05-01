@@ -190,6 +190,10 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
               text: 'Vidéos',
               link: 'admin-panel/content-management/videos',
             },
+            {
+              text: 'Editeur visuel',
+              link: 'admin-panel/content-management/visual-editor',
+            },
           ],
         },
         {
