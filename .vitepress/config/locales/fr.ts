@@ -142,6 +142,7 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
           text: 'Mise à jour de Creopse',
           link: 'development/updating-creopse',
         },
+        { text: 'Configuration', link: 'development/configuration' },
       ],
     },
     {
@@ -198,8 +199,12 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
         { text: 'Gestion des médias', link: 'admin-panel/media-management' },
         { text: 'Plugins', link: 'admin-panel/plugins' },
         { text: 'Personalisation', link: 'admin-panel/customization' },
-        { text: 'Configuration', link: 'admin-panel/configuration' },
       ],
+    },
+    {
+      text: 'Développement de plugins',
+      collapsed: false,
+      items: [{ text: 'Les bases', link: 'plugins-development/basics' }],
     },
     {
       text: 'Ressources',

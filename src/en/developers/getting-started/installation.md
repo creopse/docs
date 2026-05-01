@@ -4,7 +4,7 @@ layout: doc
 
 # Installation
 
-## A. With a Laravel backend
+## With a Laravel backend
 
 ### 1. Install Laravel
 
@@ -47,7 +47,7 @@ composer require creopse/creopse
 Run the install command to publish the configuration files and initialize the frontend
 structure of your project.
 
-#### If [Creopse CLI](https://github.com/creopse/cli) is installed globally
+#### If [Creopse CLI](../resources/cli) is installed globally
 
 ```bash
 creopse install
@@ -161,7 +161,7 @@ Log in with the default credentials:
 Change these credentials immediately after your first login.
 :::
 
-## B. With an Adonis backend
+## With an Adonis backend
 
 Adonis support is currently in development. Follow the releases on
 [GitHub](https://github.com/creopse) to be notified when it becomes available.

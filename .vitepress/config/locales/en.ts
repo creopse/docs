@@ -81,6 +81,7 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
         { text: 'Authentication', link: 'development/authentication' },
         { text: 'API & Endpoints', link: 'development/api-endpoints' },
         { text: 'Updating Creopse', link: 'development/updating-creopse' },
+        { text: 'Configuration', link: 'development/configuration' },
       ],
     },
     {
@@ -137,8 +138,12 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
         { text: 'Media management', link: 'admin-panel/media-management' },
         { text: 'Plugins', link: 'admin-panel/plugins' },
         { text: 'Customization', link: 'admin-panel/customization' },
-        { text: 'Configuration', link: 'admin-panel/configuration' },
       ],
+    },
+    {
+      text: 'Plugins development',
+      collapsed: false,
+      items: [{ text: 'Basics', link: 'plugins-development/basics' }],
     },
     {
       text: 'Resources',
