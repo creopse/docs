@@ -1,10 +1,10 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: Documentation
-  tagline: Creopse est un système de gestion de contenu (SGC) hybride.
+  text: Gérez votre contenu, librement.
+  tagline: Creopse combine la simplicité d'un CMS traditionnel avec la puissance d'une architecture headless — pour les équipes qui refusent de choisir.
   image:
     light: /images/brands/creopse-icon.svg
     dark: /images/brands/creopse-icon.svg
@@ -21,13 +21,16 @@ hero:
       link: /
 
 features:
-  - icon: 🧩
-    title: Flexibilité modulaire
-    details: Combine la simplicité d'un CMS traditionnel avec la modularité d'un CMS headless, offrant une flexibilité pour personnaliser et étendre les fonctionnalités selon les besoins spécifiques du projet.
-  - icon: ✍️
+  - icon:
+      src: /icons/content.svg
     title: Gestion de contenu agile
-    details: Permet une gestion intuitive et efficace de différents types de contenu, de la rédaction à la publication, avec des outils de création et d'édition conviviaux.
-  - icon: 🧠
-    title: Séparation du contenu et de la présentation
-    details: Offre une approche headless qui sépare le contenu de la présentation, permettant une personnalisation flexible de l'interface utilisateur sans compromettre la gestion du contenu.
+    details: Rédigez, organisez et publiez différents types de contenu depuis une interface intuitive. De la création à la mise en ligne, le workflow est pensé pour aller vite.
+  - icon:
+      src: /icons/presentation.svg
+    title: Présentation entièrement libre
+    details: Concevez votre frontend comme vous l'entendez. Creopse délivre votre contenu sans imposer de structure visuelle — votre design, vos règles.
+  - icon:
+      src: /icons/plugin.svg
+    title: Modulaire par nature
+    details: Étendez Creopse à volonté grâce à son système de plugins. Chaque fonctionnalité peut être ajoutée, retirée ou personnalisée sans toucher au cœur du système.
 ---

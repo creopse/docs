@@ -1,10 +1,10 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: Documentation
-  tagline: Creopse is a hybrid Content Management System (CMS).
+  text: Manage your content, freely.
+  tagline: Creopse combines the simplicity of a traditional CMS with the power of a headless architecture — for teams that refuse to choose.
   image:
     light: /images/brands/creopse-icon.svg
     dark: /images/brands/creopse-icon.svg
@@ -21,13 +21,16 @@ hero:
       link: /fr/
 
 features:
-  - icon: 🧩
-    title: Modular flexibility
-    details: Combines the simplicity of a traditional CMS with the modularity of a headless CMS, offering the flexibility to customize and extend functionality according to specific project needs.
-  - icon: ✍️
+  - icon:
+      src: /icons/content.svg
     title: Agile content management
-    details: Allows intuitive, efficient management of different types of content, from writing to publishing, with user-friendly authoring and editing tools.
-  - icon: 🧠
-    title: Separation of content and presentation
-    details: Offers a headless approach that separates content from presentation, allowing flexible customization of the user interface without compromising content management.
+    details: Write, organize, and publish various types of content from an intuitive interface. From creation to publication, the workflow is built for speed.
+  - icon:
+      src: /icons/presentation.svg
+    title: Fully free presentation
+    details: Design your frontend however you see fit. Creopse delivers your content without imposing any visual structure — your design, your rules.
+  - icon:
+      src: /icons/plugin.svg
+    title: Modular by nature
+    details: Extend Creopse at will with its plugin system. Every feature can be added, removed, or customized without touching the core system.
 ---
