@@ -28,7 +28,11 @@ composer create-project laravel/laravel:^11.0 nom-du-projet
 composer create-project laravel/laravel:^12.0 nom-du-projet
 ```
 
-Remplacez `nom-du-projet` par le nom souhaité pour le répertoire de votre projet.
+**Laravel 13 :**
+
+```bash
+composer create-project laravel/laravel:^13.0 nom-du-projet
+```
 
 ---
 

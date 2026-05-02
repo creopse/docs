@@ -8,7 +8,7 @@ La structure du template Creopse est basée sur celle du backend utilisé pour f
 
 ## Avec un backend Laravel
 
-Les versions de Laravel supportées sont la 10, la 11 et la 12. Lors de l'installation, Creopse détecte automatiquement la version utilisée et intègre à la structure existante les répertoires, fichiers et packages nécessaires à son fonctionnement.
+Les versions de Laravel supportées sont la 10, la 11, la 12 et la 13. Lors de l'installation, Creopse détecte automatiquement la version utilisée et intègre à la structure existante les répertoires, fichiers et packages nécessaires à son fonctionnement.
 
 > [!WARNING]
 > L'installation doit être **vierge**. Creopse écrase certains fichiers lors de l'installation ; des fichiers personnalisés préexistants pourraient être perdus.

@@ -31,10 +31,11 @@ and installed independently, without touching the core system.
 
 **With a Laravel backend:**
 
-- **Laravel**: version 10, 11, or 12.
+- **Laravel**: version 10, 11, 12 or 13.
 - **PHP**:
   - Laravel 10: 8.1 minimum.
   - Laravel 11 & 12: 8.2 minimum.
+  - Laravel 13: 8.3 minimum.
 - **Composer**: PHP dependency management.
 - **pnpm**: frontend asset compilation and management.
 
