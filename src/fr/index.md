@@ -36,3 +36,4 @@ features:
 ---
 
 <AdminShowcase />
+<HomeCta />
