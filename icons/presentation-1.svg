@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Monitor frame -->
+  <rect x="2" y="4" width="28" height="19" rx="2" fill="#1e9cd7" fill-opacity="0.12" stroke="#1e9cd7" stroke-width="1.5"/>
+  <!-- Stand -->
+  <line x1="16" y1="23" x2="16" y2="28" stroke="#1e9cd7" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="11" y1="28" x2="21" y2="28" stroke="#1e9cd7" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Layout grid inside screen -->
+  <!-- Left sidebar -->
+  <rect x="5" y="7" width="6" height="13" rx="1" fill="#1e9cd7" fill-opacity="0.3" stroke="#1e9cd7" stroke-width="1"/>
+  <!-- Top content block -->
+  <rect x="13" y="7" width="14" height="5" rx="1" fill="#ff6501" fill-opacity="0.25" stroke="#ff6501" stroke-width="1"/>
+  <!-- Bottom content blocks -->
+  <rect x="13" y="14" width="6" height="6" rx="1" fill="#1e9cd7" fill-opacity="0.2" stroke="#1e9cd7" stroke-width="1"/>
+  <rect x="21" y="14" width="6" height="6" rx="1" fill="#1e9cd7" fill-opacity="0.2" stroke="#1e9cd7" stroke-width="1"/>
+</svg>

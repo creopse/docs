@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Central block -->
+  <rect x="11" y="11" width="10" height="10" rx="2" fill="#1e9cd7" fill-opacity="0.2" stroke="#1e9cd7" stroke-width="1.5"/>
+  <!-- Top block -->
+  <rect x="11" y="2" width="10" height="7" rx="2" fill="#ff6501" fill-opacity="0.2" stroke="#ff6501" stroke-width="1.5"/>
+  <!-- Right block -->
+  <rect x="23" y="11" width="7" height="10" rx="2" fill="#1e9cd7" fill-opacity="0.15" stroke="#1e9cd7" stroke-width="1.5"/>
+  <!-- Bottom block -->
+  <rect x="11" y="23" width="10" height="7" rx="2" fill="#1e9cd7" fill-opacity="0.15" stroke="#1e9cd7" stroke-width="1.5"/>
+  <!-- Connectors -->
+  <line x1="16" y1="9" x2="16" y2="11" stroke="#ff6501" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="21" y1="16" x2="23" y2="16" stroke="#1e9cd7" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="16" y1="21" x2="16" y2="23" stroke="#1e9cd7" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Center dot -->
+  <circle cx="16" cy="16" r="2" fill="#1e9cd7"/>
+</svg>
