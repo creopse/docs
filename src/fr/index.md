@@ -35,5 +35,9 @@ features:
     details: Étendez Creopse à volonté grâce à son système de plugins. Chaque fonctionnalité peut être ajoutée, retirée ou personnalisée sans toucher au cœur du système.
 ---
 
+---
 <AdminShowcase />
+---
+<HomePowered />
+---
 <HomeCta />

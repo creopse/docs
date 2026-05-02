@@ -145,7 +145,7 @@
   <section class="admin-showcase">
     <div class="showcase-header">
       <p class="showcase-eyebrow">{{ content.eyebrow }}</p>
-      <h2 class="showcase-title">{{ content.title }}</h2>
+      <h3 class="showcase-title">{{ content.title }}</h3>
       <p class="showcase-subtitle">{{ content.subtitle }}</p>
     </div>
 
