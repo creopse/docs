@@ -2,7 +2,19 @@
 
 ## Latest Releases (v0.8.x) — April 2026
 
-**Navigation menu** management has been significantly improved: new menu item creation form, support for various item types, and bug fixes related to their configuration. Newly created pages now automatically appear at the bottom of the list. Several libraries have been updated (Vue, Vue Router, CKEditor text editor, etc.).
+**Navigation menu** management has been significantly improved: new menu item creation form, support for multiple item types, and bug fixes related to their configuration. Newly created pages now automatically appear at the bottom of the list. CKEditor packages are now shared via Module Federation. Available languages can now be configured directly in the application settings. Replaced `crypto-js` with `@noble/ciphers` and `@noble/hashes`. Several libraries have been updated (Vue, Vue Router, CKEditor, TanStack Query, DaisyUI, etc.).
+
+## v0.8.5 — April 2026
+
+Replaced **`crypto-js`** with `@noble/ciphers` and `@noble/hashes`, lighter and actively maintained alternatives. Improved error handling in data queries (fixed error payload). Added **autocomplete** to authentication forms. Dependency updates (TanStack Query, Axios, Vue Router, vue3-ts-jsoneditor, etc.).
+
+## v0.8.4 — April 2026
+
+**Navigation menu** management improvements: new menu item creation form, support for multiple item types, and bug fixes related to menu configuration. Newly created pages now automatically appear at the bottom of the page list.
+
+## v0.8.3 — April 2026
+
+**CKEditor packages** are now shared via Module Federation. Fixed a bug with the media library file uploader. Dependency updates (Vue, Vue Router, vue-i18n, DaisyUI, etc.).
 
 ## v0.8.2 — April 2026
 

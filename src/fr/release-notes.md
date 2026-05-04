@@ -2,7 +2,20 @@
 
 ## Dernières versions (v0.8.x) — Avril 2026
 
-La gestion des **menus de navigation** a été bien améliorée : nouveau formulaire de création d'éléments de menu, support de différents types d'éléments, et correction de bugs liés à leur configuration. Les nouvelles pages créées apparaissent désormais automatiquement en bas de la liste. Plusieurs librairies ont été mises à jour (Vue, Vue Router, l'éditeur de texte CKEditor, etc.).
+La gestion des **menus de navigation** a été bien améliorée : nouveau formulaire de création d'éléments de menu, support de différents types d'éléments, et correction de bugs liés à leur configuration. Les nouvelles pages créées apparaissent désormais automatiquement en bas de la liste. Les packages CKEditor sont maintenant partagés via Module Federation. Les **langues
+disponibles** sont désormais configurables directement dans les paramètres de l'application. Remplacement de `crypto-js` par `@noble/ciphers` et `@noble/hashes`. Plusieurs librairies ont été mises à jour (Vue, Vue Router, CKEditor, TanStack Query, DaisyUI, etc.).
+
+## v0.8.5 — Avril 2026
+
+Remplacement de **`crypto-js`** par `@noble/ciphers` et `@noble/hashes`, des alternatives plus légères et activement maintenues. Meilleure gestion des erreurs dans les requêtes de données (payload d'erreur corrigé). Ajout de l'**autocomplétion** sur les formulaires d'authentification. Mises à jour de dépendances (TanStack Query, Axios, Vue Router, vue3-ts-jsoneditor, etc.).
+
+## v0.8.4 — Avril 2026
+
+Gestion des **paramètres de menu** : nouveau formulaire de création d'éléments, support de différents types d'éléments, et corrections de bugs liés à leur configuration. Les nouvelles pages créées apparaissent désormais automatiquement en bas de la liste.
+
+## v0.8.3 — Avril 2026
+
+Les **packages CKEditor** sont désormais partagés via Module Federation. Corrections sur l'uploader de la médiathèque. Mises à jour de dépendances (Vue, Vue Router, vue-i18n, DaisyUI, etc.).
 
 ## v0.8.2 — Avril 2026
 
