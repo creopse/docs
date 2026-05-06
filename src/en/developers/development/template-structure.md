@@ -48,7 +48,7 @@ my-site/
 
 #### Notable elements
 
-- **[`creopse.php`](./configuration)** — Creopse configuration entry point. Review before any production deployment.
+- **[`creopse.php`](./configuration#backend-configuration)** — Creopse configuration entry point.
 - **`public/creopse/`** — Compiled administration panel assets. This directory is managed by Creopse; do not modify manually.
 - **`resources/js/pages/Container.vue`** — Root component that receives page data from Inertia and orchestrates the rendering of sections and widgets.
 - **`resources/js/composables/dataloader.ts`** — Composable executed at platform startup for asynchronous client-side data preloading.
@@ -88,7 +88,7 @@ my-site/
 
 #### Notable elements
 
-- **[`creopse.php`](./configuration)** — Same as the Vue configuration. Creopse configuration entry point.
+- **[`creopse.php`](./configuration#backend-configuration)** — Same as the Vue configuration. Creopse configuration entry point.
 - **`resources/js/pages/Container.tsx`** — React equivalent of `Container.vue`. Receives Inertia props and orchestrates the rendering of sections and widgets.
 - **`resources/js/hooks/dataloader.ts`** — Hook executed at platform startup for asynchronous client-side data preloading.
 - **`resources/js/stores/`** — Application Zustand stores.
