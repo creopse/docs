@@ -1,5 +1,9 @@
 # Notes de version
 
+## v0.9.0 — Mai 2026
+
+Refonte partielle du **layout principal**. Amélioration de l'interface du datatable des pages d'actualités. Harmonisation de tous les champs de recherche. Amélioration de la responsivité de l'interface.
+
 ## Dernières versions (v0.8.x) — Avril 2026
 
 La gestion des **menus de navigation** a été bien améliorée : nouveau formulaire de création d'éléments de menu, support de différents types d'éléments, et correction de bugs liés à leur configuration. Les nouvelles pages créées apparaissent désormais automatiquement en bas de la liste. Les packages CKEditor sont maintenant partagés via Module Federation. Les **langues

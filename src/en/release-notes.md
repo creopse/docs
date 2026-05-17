@@ -1,5 +1,9 @@
 # Release notes
 
+## v0.9.0 — May 2026
+
+Partial redesign of the **main layout**. Improved news pages datatable UI. Harmonized all search inputs. Improved interface responsiveness.
+
 ## Latest Releases (v0.8.x) — April 2026
 
 **Navigation menu** management has been significantly improved: new menu item creation form, support for multiple item types, and bug fixes related to their configuration. Newly created pages now automatically appear at the bottom of the list. CKEditor packages are now shared via Module Federation. Available languages can now be configured directly in the application settings. Replaced `crypto-js` with `@noble/ciphers` and `@noble/hashes`. Several libraries have been updated (Vue, Vue Router, CKEditor, TanStack Query, DaisyUI, etc.).
