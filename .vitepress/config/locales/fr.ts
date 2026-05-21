@@ -223,10 +223,27 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
 
 function userGuide(): DefaultTheme.SidebarItem[] {
   return [
+    { text: 'Pour commencer', link: 'getting-started' },
     {
-      text: 'Introduction',
+      text: 'Rubriques',
       collapsed: false,
-      items: [{ text: 'Pour commencer', link: 'getting-started' }],
+      items: [
+        { text: "Vue d'ensemble", link: 'sections/dashboard' },
+        { text: 'Médiathèque', link: 'sections/media-library' },
+        { text: 'Gestion de contenu', link: 'sections/content-management' },
+        { text: 'Editeur visuel', link: 'sections/visual-editor' },
+        { text: 'Gestion des news', link: 'sections/news-management' },
+        { text: 'Gestion des utilisateurs', link: 'sections/user-management' },
+        { text: "Gestion d'accès", link: 'sections/access-management' },
+        { text: 'Informations du compte', link: 'sections/account-info' },
+        { text: 'Extensions', link: 'sections/plugins' },
+        { text: 'Paramètres', link: 'sections/settings' },
+      ],
+    },
+    {
+      text: 'Support',
+      collapsed: false,
+      items: [{ text: 'FAQ', link: 'support/faq' }],
     },
   ]
 }

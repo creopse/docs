@@ -162,10 +162,27 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
 
 function userGuide(): DefaultTheme.SidebarItem[] {
   return [
+    { text: 'Getting started', link: 'getting-started' },
     {
-      text: 'Introduction',
+      text: 'Sections',
       collapsed: false,
-      items: [{ text: 'Getting started', link: 'getting-started' }],
+      items: [
+        { text: 'Dashboard', link: 'sections/dashboard' },
+        { text: 'Media library', link: 'sections/media-library' },
+        { text: 'Content management', link: 'sections/content-management' },
+        { text: 'Visual editor', link: 'sections/visual-editor' },
+        { text: 'News management', link: 'sections/news-management' },
+        { text: 'User management', link: 'sections/user-management' },
+        { text: 'Access management', link: 'sections/access-management' },
+        { text: 'Account info', link: 'sections/account-info' },
+        { text: 'Plugins', link: 'sections/plugins' },
+        { text: 'Settings', link: 'sections/settings' },
+      ],
+    },
+    {
+      text: 'Support',
+      collapsed: false,
+      items: [{ text: 'FAQ', link: 'support/faq' }],
     },
   ]
 }
