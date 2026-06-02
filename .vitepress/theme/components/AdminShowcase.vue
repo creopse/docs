@@ -59,14 +59,14 @@
           alt: "Capture d'écran de la gestion des modèles de contenu",
         },
         {
-          id: 'media',
+          id: 'media-library',
           label: 'Médias',
           description:
             "Centralisez images, vidéos et documents dans une médiathèque unifiée. Organisez, recherchez et réutilisez vos assets depuis n'importe quelle page de l'administration.",
           alt: "Capture d'écran de la gestion des médias",
         },
         {
-          id: 'plugins',
+          id: 'plugins-upload',
           label: 'Plugins',
           description:
             'Installez, activez ou désactivez des extensions en un clic. Chaque plugin étend les capacités de Creopse sans modifier le cœur du système.',
@@ -95,14 +95,14 @@
           alt: 'Screenshot of the content model management interface',
         },
         {
-          id: 'media',
+          id: 'media-library',
           label: 'Media',
           description:
             'Centralise images, videos and documents in a unified media library. Organise, search and reuse your assets from anywhere in the administration.',
           alt: 'Screenshot of the media management interface',
         },
         {
-          id: 'plugins',
+          id: 'plugins-upload',
           label: 'Plugins',
           description:
             'Install, enable or disable extensions in one click. Each plugin extends Creopse without touching the core system.',
