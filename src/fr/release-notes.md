@@ -1,110 +1,113 @@
 # Notes de version
 
+## v0.9.2 - Juin 2026
+
+Les liens des éléments de menu sont désormais plus flexibles à configurer. Corrections de bugs mineurs. Mises à jour de plusieurs bibliothèques internes.
+
+## v0.9.1 — Mai 2026
+
+Remplacement du sélecteur de couleurs par une version plus fiable. Certains boutons d'action restent désormais visibles lors du défilement de la page. Mises à jour de plusieurs bibliothèques internes.
+
 ## v0.9.0 — Mai 2026
 
-Refonte partielle du **layout principal**. Amélioration de l'interface du datatable des pages d'actualités. Harmonisation de tous les champs de recherche. Amélioration de la responsivité de l'interface.
-
-## Dernières versions (v0.8.x) — Avril 2026
-
-La gestion des **menus de navigation** a été bien améliorée : nouveau formulaire de création d'éléments de menu, support de différents types d'éléments, et correction de bugs liés à leur configuration. Les nouvelles pages créées apparaissent désormais automatiquement en bas de la liste. Les packages CKEditor sont maintenant partagés via Module Federation. Les **langues
-disponibles** sont désormais configurables directement dans les paramètres de l'application. Remplacement de `crypto-js` par `@noble/ciphers` et `@noble/hashes`. Plusieurs librairies ont été mises à jour (Vue, Vue Router, CKEditor, TanStack Query, DaisyUI, etc.).
+Refonte partielle de la mise en page principale. Amélioration de l'affichage des pages d'actualités. Les barres de recherche sont désormais harmonisées dans toute l'application. Améliorations générales de la responsivité.
 
 ## v0.8.5 — Avril 2026
 
-Remplacement de **`crypto-js`** par `@noble/ciphers` et `@noble/hashes`, des alternatives plus légères et activement maintenues. Meilleure gestion des erreurs dans les requêtes de données (payload d'erreur corrigé). Ajout de l'**autocomplétion** sur les formulaires d'authentification. Mises à jour de dépendances (TanStack Query, Axios, Vue Router, vue3-ts-jsoneditor, etc.).
+Remplacement d'une bibliothèque de chiffrement interne par une alternative plus légère et activement maintenue. Meilleure gestion des erreurs. Ajout de l'autocomplétion sur les formulaires de connexion. Mises à jour de plusieurs bibliothèques internes.
 
 ## v0.8.4 — Avril 2026
 
-Gestion des **paramètres de menu** : nouveau formulaire de création d'éléments, support de différents types d'éléments, et corrections de bugs liés à leur configuration. Les nouvelles pages créées apparaissent désormais automatiquement en bas de la liste.
+Amélioration de la gestion du menu de navigation : nouveau formulaire de création d'éléments, prise en charge de plusieurs types d'éléments et diverses corrections. Les pages nouvellement créées apparaissent désormais automatiquement en bas de la liste.
 
 ## v0.8.3 — Avril 2026
 
-Les **packages CKEditor** sont désormais partagés via Module Federation. Corrections sur l'uploader de la médiathèque. Mises à jour de dépendances (Vue, Vue Router, vue-i18n, DaisyUI, etc.).
+Correction d'un bug avec l'importation de fichiers dans la médiathèque. Mises à jour de plusieurs bibliothèques internes.
 
 ## v0.8.2 — Avril 2026
 
-Possibilité de configurer les **langues disponibles** directement dans la configuration de l'application. Mises à jour de dépendances.
+Les langues disponibles peuvent désormais être configurées directement depuis les paramètres de l'application.
 
 ## v0.8.1 — Avril 2026
 
-Corrections sur le système de **plugins** : les modules tableau de bord et paramètres d'un plugin ne sont plus obligatoires, et chaque plugin indique maintenant s'il possède une interface utilisateur.
+Diverses corrections du système de plugins. Mises à jour de plusieurs bibliothèques internes.
 
 ## v0.8.0 — Mars 2026
 
-Nouvelle page de **gestion des plugins** avec activation/désactivation améliorée. Mise à jour vers Vite 7.
+Nouvelle page de gestion des plugins avec une activation et désactivation améliorées. Améliorations des performances.
 
 ## v0.7.7 — Mars 2026
 
-Améliorations sur la **gestion du contenu** : filtre de recherche de pages dans la barre latérale, possibilité de réordonner les pages, et support des titres de liens dans les sections de page.
+Améliorations de la gestion du contenu : recherche de pages dans la barre latérale, possibilité de réordonner les pages et prise en charge des titres de liens dans les sections de page.
 
 ## v0.7.5 — Mars 2026
 
-En mode développement, accès aux données brutes d'un élément de contenu pour faciliter le débogage. Mises à jour de dépendances.
+En mode développement, les données brutes des éléments de contenu sont désormais accessibles pour faciliter le débogage. Mises à jour de plusieurs bibliothèques internes.
 
 ## v0.7.4 — Février 2026
 
-Les **interfaces s'adaptent mieux aux écrans de toutes tailles** (responsive). Correction d'un bug sur les paramètres des structures de données. Mises à jour de dépendances majeures (vue-i18n, CKEditor…).
+Améliorations de l'interface responsive pour toutes les tailles d'écran. Correction d'un bug lié aux paramètres de structure de données. Mises à jour majeures de bibliothèques internes.
 
 ## v0.7.3 — Février 2026
 
-Nombreuses améliorations sur l'**éditeur visuel** : meilleure gestion des champs de sections, adaptation du générateur de formulaires.
+Nombreuses améliorations de l'éditeur visuel : meilleure gestion des champs de section et du générateur de formulaires.
 
 ## v0.7.2 — Février 2026
 
-Améliorations sur l'**assistant de configuration initiale** (setup) : meilleure création de base de données, corrections de bugs. Mises à jour CKEditor et Vue.
+Améliorations de l'assistant de configuration initiale : meilleure création de base de données et corrections de bugs.
 
 ## v0.7.1 — Février 2026
 
-Le **sélecteur d'icônes** dans les paramètres de l'application peut maintenant être configuré pour retourner le nom de l'icône.
+Le sélecteur d'icônes dans les paramètres de l'application peut désormais être configuré pour retourner le nom de l'icône.
 
 ## v0.7.0 — Février 2026
 
-Refonte complète du **système d'accès et d'authentification**, avec de nouveaux services API et une architecture plus propre.
+Refonte complète du système d'accès et d'authentification avec une architecture plus claire.
 
 ## v0.6.x — Décembre 2025 – Janvier 2026
 
-Gestion des **métadonnées et de la visibilité des vidéos**. Corrections de bugs sur l'éditeur visuel.
+Gestion des métadonnées et de la visibilité des vidéos. Corrections de bugs dans l'éditeur visuel.
 
 ## v0.6.0 — Décembre 2025
 
-Lancement de l'**éditeur visuel** : gestion des sections de pages directement depuis l'interface, avec une barre latérale dédiée.
+Lancement de l'éditeur visuel : gérez les sections de page directement depuis l'interface via une barre latérale dédiée.
 
 ## v0.5.0-rc.x — Septembre–Novembre 2025
 
-Améliorations progressives de l'éditeur visuel : copie de données entre sections, réorganisation par glisser-déposer, mode prévisualisation, meilleure gestion des modèles de contenu.
+Améliorations progressives de l'éditeur visuel : copie de données entre sections, réorganisation par glisser-déposer, mode prévisualisation et meilleure gestion des modèles de contenu.
 
 ## v0.5.0-rc.1 — Septembre 2025
 
-Grande mise à jour : refonte de la mise en page principale, amélioration de la médiathèque, montée de version de CKEditor.
+Mise à jour majeure : refonte de la mise en page principale, améliorations de la médiathèque et mise à niveau de l'éditeur de texte enrichi.
 
 ## v0.0.17 — Août 2025
 
-Optimisations des performances : requêtes mises en cache pour les articles, newsletters, et autres données.
+Améliorations des performances : chargement plus rapide des articles, newsletters et autres contenus.
 
 ## v0.0.16 — Mai 2025
 
-Mise en place du **système de plugins**.
+Introduction du système de plugins.
 
 ## v0.0.14 — Avril 2025
 
-Intégration d'**APIs de traduction automatique** dans les champs multilingues. Import et export des utilisateurs.
+Prise en charge de la traduction automatique dans les champs multilingues. Fonctionnalité d'import et d'export d'utilisateurs.
 
 ## v0.0.13 — Mars 2025
 
-Nouveaux types de champs dans le générateur de formulaires : date/heure, plages horaires, mois, trimestre, semaine.
+Nouveaux types de champs dans le générateur de formulaires : date/heure, plages horaires, mois, trimestre et semaine.
 
 ## v0.0.10 — Mars 2025
 
-Ajout de champs liste et liste multilingue dans le générateur de formulaires.
+Ajout des champs liste et liste multilingue dans le générateur de formulaires.
 
 ## v0.0.8 — Février 2025
 
-Améliorations de l'interface mobile (header, affichage général). Limite configurable sur les sélections multiples.
+Améliorations de l'interface mobile. Limite configurable sur les sélections multiples.
 
 ## v0.0.5 — Janvier 2025
 
-Nombreuses corrections et nouvelles fonctionnalités : gestion des permaliens, sélecteur de médias, mise à jour auto des sections, affichage de la position des sections, correctifs de performance et de pagination.
+Nombreuses corrections et nouvelles fonctionnalités : gestion des permaliens, sélecteur de médias, mise à jour automatique des sections, affichage de la position des sections et corrections de pagination.
 
 ## v0.0.2 — Janvier 2025
 
-Première version publique : tableau de bord avec carte des visites, gestion des vidéos.
+Première version publique : tableau de bord avec carte des visites et gestion des vidéos.
