@@ -12,8 +12,8 @@ L'élément de base de Creopse est la section, elle peut être définie comme un
 
 Les pages dans Creopse sont des empilements de sections dont on peut modifier la position et le contenu. Chaque page peut comporter autant de sections que nécessaire, et le contenu de chacune est lié à la page sur laquelle elle se trouve. Une même section peut ainsi être utilisée sur plusieurs pages avec des contenus différents, ou apparaître plusieurs fois sur une même page. Il est également possible de lier le contenu d'une section à son contenu sur une autre page.
 
-![Section / Page relationship](/images/core-concepts/section-page-relation-fr-light.svg#light-only)
-![Section / Page relationship](/images/core-concepts/section-page-relation-fr-dark.svg#dark-only)
+![Section / Page relation](/images/core-concepts/section-page-relation-fr-light.svg#light-only)
+![Section / Page relation](/images/core-concepts/section-page-relation-fr-dark.svg#dark-only)
 
 ## Les modèles de contenu
 
