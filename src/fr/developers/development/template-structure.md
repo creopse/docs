@@ -50,8 +50,9 @@ mon-site/
 
 - **[`creopse.php`](./configuration#configuration-du-backend)** — Point d'entrée de la configuration Creopse.
 - **`public/creopse/`** — Assets compilés du panel d'administration. Ce répertoire est géré par Creopse ; ne pas modifier manuellement.
+- **`resources/js/components/sections/`, `resources/js/components/widgets/`** — Composants scaffoldés via la CLI, voir [Sections & Widgets](./sections-widgets).
 - **`resources/js/pages/Container.vue`** — Composant racine qui reçoit les données de page depuis Inertia et orchestre le rendu des sections et widgets.
-- **`resources/js/composables/dataloader.ts`** — Composable exécuté au lancement de la plateforme pour le pré-chargement de données asynchrones côté client.
+- **`resources/js/composables/dataloader.ts`** — Composable exécuté au lancement de la plateforme pour le pré-chargement de données asynchrones côté client — voir le pattern de store partagé dans [Modèles de contenu](./content-models#store-partage-pour-un-modele-reutilise-sur-plusieurs-sections-vue).
 - **`resources/js/stores/`** — Stores Pinia de l'application. Creopse y injecte quelques stores au démarrage.
 - **[`plugins/`](../plugins-development/basics)** — Répertoire de stockage des plugins installés. Chaque plugin est isolé dans son propre sous-répertoire `{vendor}-{name}/`.
 
@@ -89,7 +90,12 @@ mon-site/
 #### Éléments notables
 
 - **[`creopse.php`](./configuration#configuration-du-backend)** — Identique à la configuration Vue. Point d'entrée de la configuration Creopse.
+- **`resources/js/components/sections/`, `resources/js/components/widgets/`** — Composants scaffoldés via la CLI, voir [Sections & Widgets](./sections-widgets).
 - **`resources/js/pages/Container.tsx`** — Équivalent React de `Container.vue`. Reçoit les props Inertia et orchestre le rendu des sections et widgets.
 - **`resources/js/hooks/dataloader.ts`** — Hook exécuté au lancement de la plateforme pour le pré-chargement de données asynchrones côté client.
 - **`resources/js/stores/`** — Stores Zustand de l'application.
 - **[`plugins/`](../plugins-development/basics)** — Répertoire de stockage des plugins installés. Chaque plugin est isolé dans son propre sous-répertoire `{vendor}-{name}/`.
+
+## Prochaines étapes
+
+Une fois cette structure en place, voir [Sections & Widgets](./sections-widgets), [Pages](./pages), [Modèles de contenu](./content-models), [Permaliens](./permalinks) et [Menus](./menus) pour construire le contenu du template, et [Utilitaires](./utilities) pour la liste des composables/hooks et helpers disponibles dans un composant.

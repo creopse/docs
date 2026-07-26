@@ -75,22 +75,23 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: 'Template structure', link: 'development/template-structure' },
+        { text: 'Configuration', link: 'development/configuration' },
         { text: 'Sections & Widgets', link: 'development/sections-widgets' },
         { text: 'Pages', link: 'development/pages' },
         { text: 'Content models', link: 'development/content-models' },
         { text: 'Permalinks', link: 'development/permalinks' },
         { text: 'Menus', link: 'development/menus' },
         { text: 'Utilities', link: 'development/utilities' },
-        { text: 'Authentication', link: 'development/authentication' },
-        { text: 'API & Endpoints', link: 'development/api-endpoints' },
-        { text: 'Updating Creopse', link: 'development/updating-creopse' },
-        { text: 'Configuration', link: 'development/configuration' },
       ],
     },
     {
-      text: 'Deployment',
+      text: 'Backend',
       collapsed: false,
-      items: [{ text: 'Production', link: 'deployment/production' }],
+      items: [
+        { text: 'Authentication', link: 'development/authentication' },
+        { text: 'API & Endpoints', link: 'development/api-endpoints' },
+        { text: 'Updating Creopse', link: 'development/updating-creopse' },
+      ],
     },
     {
       text: 'Administration panel',
@@ -148,15 +149,12 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
       ],
     },
     {
-      text: 'Plugins development',
-      collapsed: false,
-      items: [{ text: 'Basics', link: 'plugins-development/basics' }],
-    },
-    {
       text: 'Resources',
       collapsed: false,
       items: [
         { text: 'CLI', link: 'resources/cli' },
+        { text: 'Production deployment', link: 'deployment/production' },
+        { text: 'Plugin development', link: 'plugins-development/basics' },
         { text: 'FAQ', link: 'resources/faq' },
       ],
     },

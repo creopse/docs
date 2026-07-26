@@ -133,25 +133,26 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
           text: 'Structure du template',
           link: 'development/template-structure',
         },
+        { text: 'Configuration', link: 'development/configuration' },
         { text: 'Sections & Widgets', link: 'development/sections-widgets' },
         { text: 'Pages', link: 'development/pages' },
         { text: 'Modèles de contenu', link: 'development/content-models' },
         { text: 'Permaliens', link: 'development/permalinks' },
         { text: 'Menus', link: 'development/menus' },
         { text: 'Utilitaires', link: 'development/utilities' },
+      ],
+    },
+    {
+      text: 'Backend',
+      collapsed: false,
+      items: [
         { text: 'Authentification', link: 'development/authentication' },
         { text: 'API & Endpoints', link: 'development/api-endpoints' },
         {
           text: 'Mise à jour de Creopse',
           link: 'development/updating-creopse',
         },
-        { text: 'Configuration', link: 'development/configuration' },
       ],
-    },
-    {
-      text: 'Déploiement',
-      collapsed: false,
-      items: [{ text: 'Production', link: 'deployment/production' }],
     },
     {
       text: "Interface d'administration",
@@ -209,15 +210,15 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
       ],
     },
     {
-      text: 'Développement de plugins',
-      collapsed: false,
-      items: [{ text: 'Les bases', link: 'plugins-development/basics' }],
-    },
-    {
       text: 'Ressources',
       collapsed: false,
       items: [
         { text: 'CLI', link: 'resources/cli' },
+        { text: 'Déploiement en production', link: 'deployment/production' },
+        {
+          text: 'Développement de plugins',
+          link: 'plugins-development/basics',
+        },
         { text: 'FAQ', link: 'resources/faq' },
       ],
     },

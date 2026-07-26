@@ -50,8 +50,9 @@ my-site/
 
 - **[`creopse.php`](./configuration#backend-configuration)** — Creopse configuration entry point.
 - **`public/creopse/`** — Compiled administration panel assets. This directory is managed by Creopse; do not modify manually.
+- **`resources/js/components/sections/`, `resources/js/components/widgets/`** — Components scaffolded through the CLI, see [Sections & Widgets](./sections-widgets).
 - **`resources/js/pages/Container.vue`** — Root component that receives page data from Inertia and orchestrates the rendering of sections and widgets.
-- **`resources/js/composables/dataloader.ts`** — Composable executed at platform startup for asynchronous client-side data preloading.
+- **`resources/js/composables/dataloader.ts`** — Composable executed at platform startup for asynchronous client-side data preloading — see the shared store pattern in [Content Models](./content-models#shared-store-for-a-model-reused-across-sections-vue).
 - **`resources/js/stores/`** — Application Pinia stores. Creopse injects a few of its own stores at startup.
 - **[`plugins/`](../plugins-development/basics)** — Storage directory for installed plugins. Each plugin is isolated in its own `{vendor}-{name}/` subdirectory.
 
@@ -89,7 +90,12 @@ my-site/
 #### Notable elements
 
 - **[`creopse.php`](./configuration#backend-configuration)** — Same as the Vue configuration. Creopse configuration entry point.
+- **`resources/js/components/sections/`, `resources/js/components/widgets/`** — Components scaffolded through the CLI, see [Sections & Widgets](./sections-widgets).
 - **`resources/js/pages/Container.tsx`** — React equivalent of `Container.vue`. Receives Inertia props and orchestrates the rendering of sections and widgets.
 - **`resources/js/hooks/dataloader.ts`** — Hook executed at platform startup for asynchronous client-side data preloading.
 - **`resources/js/stores/`** — Application Zustand stores.
 - **[`plugins/`](../plugins-development/basics)** — Storage directory for installed plugins. Each plugin is isolated in its own `{vendor}-{name}/` subdirectory.
+
+## Next steps
+
+Once this structure is in place, see [Sections & Widgets](./sections-widgets), [Pages](./pages), [Content Models](./content-models), [Permalinks](./permalinks), and [Menus](./menus) to build out the template's content, and [Utilities](./utilities) for the list of composables/hooks and helpers available in a component.
