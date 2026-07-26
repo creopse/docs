@@ -76,7 +76,10 @@ function developerDocs(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Template structure', link: 'development/template-structure' },
         { text: 'Sections & Widgets', link: 'development/sections-widgets' },
+        { text: 'Pages', link: 'development/pages' },
         { text: 'Content models', link: 'development/content-models' },
+        { text: 'Permalinks', link: 'development/permalinks' },
+        { text: 'Menus', link: 'development/menus' },
         { text: 'Utilities', link: 'development/utilities' },
         { text: 'Authentication', link: 'development/authentication' },
         { text: 'API & Endpoints', link: 'development/api-endpoints' },
