@@ -23,3 +23,7 @@ A permission authorizes a specific action (e.g. "Use visual editor", "Manage plu
 ::: tip
 Change a role's permissions with care — it immediately affects every user assigned to that role.
 :::
+
+::: tip Are you a developer?
+A technical version of this section exists in the [Developer Docs](../../developers/admin-panel/user-role-management).
+:::

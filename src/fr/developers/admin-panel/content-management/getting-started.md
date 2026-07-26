@@ -26,3 +26,7 @@ La section **Gestion de contenu** de l'interface d'administration regroupe tout 
 ::: tip
 Chaque élément listé ici correspond à une entrée du menu latéral visible une fois dans **Gestion de contenu**, à gauche de l'écran.
 :::
+
+::: tip Voir aussi
+Une version orientée utilisateur final de cette rubrique existe dans le [Guide Utilisateur](../../../users/sections/content-management).
+:::

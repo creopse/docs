@@ -23,3 +23,7 @@ Une permission autorise une action précise (ex. « Utiliser l'éditeur visuel �
 ::: tip
 Modifiez les permissions d'un rôle avec précaution — cela affecte immédiatement tous les utilisateurs auxquels ce rôle est attribué.
 :::
+
+::: tip Vous êtes développeur ?
+Une version technique de cette rubrique existe dans la [Documentation Développeur](../../developers/admin-panel/user-role-management).
+:::

@@ -26,3 +26,7 @@ The **General**, **Content**, and **Translation** tabs respectively cover global
 ::: tip
 Export your settings before making a significant change on a production environment — this lets you roll back easily if something goes wrong.
 :::
+
+::: tip See also
+An end-user–oriented version of this section exists in the [User Guide](../../users/sections/settings).
+:::

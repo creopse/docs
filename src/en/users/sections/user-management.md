@@ -18,3 +18,7 @@ The list shows, for each user, their avatar, name, account type, roles, and emai
 ::: tip
 The role assigned to a user determines what they can see and edit in the administration — see [Access management](./access-management).
 :::
+
+::: tip Are you a developer?
+A technical version of this section exists in the [Developer Docs](../../developers/admin-panel/user-role-management).
+:::

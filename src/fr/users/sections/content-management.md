@@ -31,3 +31,7 @@ La liste de gauche affiche toutes les pages du site (recherche, ajout, réorgani
 
 ![Gestion des pages](/images/screenshots/fr/light/page-management.png#light-only)
 ![Gestion des pages](/images/screenshots/fr/dark/page-management.png#dark-only)
+
+::: tip Vous êtes développeur ?
+Une version technique de cette rubrique (avec les commandes CLI associées) existe dans la [Documentation Développeur](../../developers/admin-panel/content-management/getting-started).
+:::

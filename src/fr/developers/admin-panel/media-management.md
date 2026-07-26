@@ -22,3 +22,7 @@ La médiathèque centralise les images, vidéos, audios et documents du site. Un
 ::: tip Pour les développeurs
 Ces mêmes opérations sont scriptables via [`creopse media`](../resources/cli#creopse-media-alias-med) — utile pour peupler la médiathèque en lot lors de l'intégration d'un template plutôt que de téléverser chaque fichier manuellement. Un **fichier** sur disque et son **enregistrement** en base (`MediaFile`) peuvent être supprimés indépendamment l'un de l'autre.
 :::
+
+::: tip Voir aussi
+Une version orientée utilisateur final de cette rubrique existe dans le [Guide Utilisateur](../../users/sections/media-library).
+:::

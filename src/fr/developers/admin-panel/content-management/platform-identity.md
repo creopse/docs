@@ -37,3 +37,7 @@ behance, medium, stackOverflow, threads, messenger, playstore, appstore
 ::: tip Pour les développeurs
 Ces valeurs peuvent aussi être renseignées en ligne de commande via [`creopse base-info update`](../../resources/cli#creopse-base-info-alias-info) — pratique pour les peupler automatiquement lors de l'intégration d'un template plutôt que de repasser par cette page manuellement.
 :::
+
+::: tip Voir aussi
+Une version orientée utilisateur final de cette rubrique existe dans le [Guide Utilisateur](../../../users/sections/content-management).
+:::

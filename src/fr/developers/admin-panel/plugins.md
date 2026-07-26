@@ -23,3 +23,7 @@ N'installez que des extensions provenant d'une source de confiance — un plugin
 ::: tip Pour les développeurs
 Ce que vous téléversez ici est un plugin déjà empaqueté. Pour développer un plugin (classes Laravel générées à l'intérieur du paquet), voir [Développement de plugins](../plugins-development/basics).
 :::
+
+::: tip Voir aussi
+Une version orientée utilisateur final de cette rubrique existe dans le [Guide Utilisateur](../../users/sections/plugins).
+:::

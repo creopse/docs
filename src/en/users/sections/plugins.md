@@ -19,3 +19,7 @@ The **Upload an plugin** button opens a window where you can drag and drop (or s
 ::: warning
 Only install plugins from a source you trust — a plugin has access to your site once installed.
 :::
+
+::: tip Are you a developer?
+A technical version of this section exists in the [Developer Docs](../../developers/admin-panel/plugins).
+:::

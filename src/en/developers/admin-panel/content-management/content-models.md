@@ -34,3 +34,7 @@ Each model displays:
 ::: tip For developers
 Creating models and items can also be scripted through the CLI — see [`creopse content-model`](../../resources/cli#creopse-content-model-alias-cm). A model with a detail page then needs to be wired through a [permalink](./permalinks).
 :::
+
+::: tip See also
+An end-user–oriented version of this section exists in the [User Guide](../../../users/sections/content-management).
+:::

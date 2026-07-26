@@ -31,3 +31,7 @@ At the bottom of the screen: the number of sections on the page, and the timesta
 ::: tip
 The visual editor edits the same data as the **Page Sections** screen — see [Pages](./pages) — both interfaces stay in sync.
 :::
+
+::: tip See also
+An end-user–oriented version of this section exists in the [User Guide](../../../users/sections/visual-editor).
+:::

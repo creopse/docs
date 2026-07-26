@@ -31,3 +31,7 @@ En bas de l'écran : le nombre de sections sur la page, et l'horodatage de la de
 ::: tip
 L'éditeur visuel modifie les mêmes données que la page **Sections de page** — voir [Pages](./pages) — les deux interfaces restent synchronisées.
 :::
+
+::: tip Voir aussi
+Une version orientée utilisateur final de cette rubrique existe dans le [Guide Utilisateur](../../../users/sections/visual-editor).
+:::

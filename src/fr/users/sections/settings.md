@@ -23,3 +23,7 @@ Configurez les options générales de votre site, réparties en quatre onglets :
 ::: tip
 Exportez vos paramètres avant un changement important — cela vous permet de revenir en arrière facilement en cas d'erreur.
 :::
+
+::: tip Vous êtes développeur ?
+Une version technique de cette rubrique existe dans la [Documentation Développeur](../../developers/admin-panel/customization).
+:::

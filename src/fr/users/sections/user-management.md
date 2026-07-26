@@ -18,3 +18,7 @@ La liste affiche, pour chaque utilisateur, son avatar, son nom, son type de comp
 ::: tip
 Le rôle attribué à un utilisateur détermine ce qu'il peut voir et modifier dans l'administration — voir [Gestion d'accès](./access-management).
 :::
+
+::: tip Vous êtes développeur ?
+Une version technique de cette rubrique existe dans la [Documentation Développeur](../../developers/admin-panel/user-role-management).
+:::

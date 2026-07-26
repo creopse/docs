@@ -31,3 +31,7 @@ The list on the left shows all of your site's pages (search, add, reorder). Sele
 
 ![Page Management](/images/screenshots/en/light/page-management.png#light-only)
 ![Page Management](/images/screenshots/en/dark/page-management.png#dark-only)
+
+::: tip Are you a developer?
+A technical version of this section (with the associated CLI commands) exists in the [Developer Docs](../../developers/admin-panel/content-management/getting-started).
+:::

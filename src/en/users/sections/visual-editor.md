@@ -22,3 +22,7 @@ At the bottom of the screen: the number of sections on the page, and the time of
 ::: tip
 Remember to publish once your changes are complete — until you do, only the previous version stays visible on the public site.
 :::
+
+::: tip Are you a developer?
+A technical version of this section exists in the [Developer Docs](../../developers/admin-panel/content-management/visual-editor).
+:::

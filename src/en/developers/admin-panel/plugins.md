@@ -23,3 +23,7 @@ Only install plugins from a source you trust — a plugin has access to the site
 ::: tip For developers
 What you upload here is an already-packaged plugin. To develop a plugin (Laravel classes generated inside the package), see [Plugin Development](../plugins-development/basics).
 :::
+
+::: tip See also
+An end-user–oriented version of this section exists in the [User Guide](../../users/sections/plugins).
+:::

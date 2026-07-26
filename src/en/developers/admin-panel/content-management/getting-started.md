@@ -26,3 +26,7 @@ The **Content Management** section of the admin panel brings together everything
 ::: tip
 Each item listed here corresponds to an entry in the side menu visible once inside **Content Management**, on the left of the screen.
 :::
+
+::: tip See also
+An end-user–oriented version of this section exists in the [User Guide](../../../users/sections/content-management).
+:::

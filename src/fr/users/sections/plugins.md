@@ -19,3 +19,7 @@ Le bouton **Téléverser une extension** ouvre une fenêtre où glisser-déposer
 ::: warning
 N'installez que des extensions provenant d'une source de confiance — une extension a accès à votre site une fois installée.
 :::
+
+::: tip Vous êtes développeur ?
+Une version technique de cette rubrique existe dans la [Documentation Développeur](../../developers/admin-panel/plugins).
+:::

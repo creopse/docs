@@ -23,3 +23,7 @@ Graphic elements of the administration (logo, icon, and their monochrome version
 ::: tip
 Export your settings before making a significant change — this lets you roll back easily if something goes wrong.
 :::
+
+::: tip Are you a developer?
+A technical version of this section exists in the [Developer Docs](../../developers/admin-panel/customization).
+:::

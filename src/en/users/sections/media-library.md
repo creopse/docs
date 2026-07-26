@@ -26,3 +26,7 @@ Each thumbnail offers four actions: view the file's information, duplicate it, e
 ::: tip
 A checkbox on each file (and **Select all** at the top of the list) lets you apply an action to several files at once.
 :::
+
+::: tip Are you a developer?
+A technical version of this section exists in the [Developer Docs](../../developers/admin-panel/media-management).
+:::

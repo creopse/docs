@@ -42,3 +42,7 @@ A permission authorizes a specific action (e.g. `use-visual-editor`, `manage-plu
 ::: warning
 Changing a role's permissions immediately affects every user assigned to that role — on a production environment, validate this kind of change carefully.
 :::
+
+::: tip See also
+End-user–oriented versions exist in the User Guide: [User Management](../../users/sections/user-management) and [Access management](../../users/sections/access-management).
+:::

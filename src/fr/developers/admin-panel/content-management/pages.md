@@ -39,3 +39,7 @@ Le bloc **Insérer ou retirer des sections** permet d'attacher une nouvelle inst
 ::: tip Pour les développeurs
 La création de pages et l'attachement de sections (avec `link-id`, ordre, activation) peuvent aussi être scriptés via la CLI — voir [Pages](../../development/pages) et le détail du fonctionnement des sections dans [Sections & Widgets](../../development/sections-widgets).
 :::
+
+::: tip Voir aussi
+Une version orientée utilisateur final de cette rubrique existe dans le [Guide Utilisateur](../../../users/sections/content-management).
+:::

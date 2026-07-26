@@ -22,3 +22,7 @@ En bas de l'écran : le nombre de sections sur la page, et l'heure de la derniè
 ::: tip
 Pensez à publier une fois vos modifications terminées — tant que ce n'est pas fait, seule la version précédente reste visible sur le site public.
 :::
+
+::: tip Vous êtes développeur ?
+Une version technique de cette rubrique existe dans la [Documentation Développeur](../../developers/admin-panel/content-management/visual-editor).
+:::

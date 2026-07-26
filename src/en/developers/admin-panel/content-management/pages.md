@@ -39,3 +39,7 @@ The **Insert or remove sections** block lets you attach a new section instance t
 ::: tip For developers
 Creating pages and attaching sections (with `link-id`, ordering, enabling/disabling) can also be scripted through the CLI — see [Pages](../../development/pages) and how sections work in detail in [Sections & Widgets](../../development/sections-widgets).
 :::
+
+::: tip See also
+An end-user–oriented version of this section exists in the [User Guide](../../../users/sections/content-management).
+:::

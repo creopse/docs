@@ -22,3 +22,7 @@ The media library centralizes the site's images, videos, audio files, and docume
 ::: tip For developers
 These same operations can be scripted through [`creopse media`](../resources/cli#creopse-media-alias-med) — useful for bulk-populating the media library while integrating a template rather than uploading each file manually. A **file** on disk and its database **record** (`MediaFile`) can be deleted independently of each other.
 :::
+
+::: tip See also
+An end-user–oriented version of this section exists in the [User Guide](../../users/sections/media-library).
+:::

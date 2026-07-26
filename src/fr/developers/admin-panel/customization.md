@@ -26,3 +26,7 @@ Les onglets **Général**, **Contenu** et **Traduction** couvrent respectivement
 ::: tip
 Exportez vos réglages avant un changement important sur un environnement en production — cela permet de revenir en arrière facilement en cas d'erreur.
 :::
+
+::: tip Voir aussi
+Une version orientée utilisateur final de cette rubrique existe dans le [Guide Utilisateur](../../users/sections/settings).
+:::

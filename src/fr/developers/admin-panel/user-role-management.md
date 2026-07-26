@@ -42,3 +42,7 @@ Une permission autorise une action précise (ex. `use-visual-editor`, `manage-pl
 ::: warning
 Modifier les permissions d'un rôle affecte immédiatement tous les utilisateurs auxquels ce rôle est attribué — sur un environnement en production, valider ce type de changement avec précaution.
 :::
+
+::: tip Voir aussi
+Des versions orientées utilisateur final existent dans le Guide Utilisateur : [Gestion des utilisateurs](../../users/sections/user-management) et [Gestion d'accès](../../users/sections/access-management).
+:::

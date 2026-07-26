@@ -26,3 +26,7 @@ Chaque vignette propose quatre actions : voir les informations du fichier, le du
 ::: tip
 Une case à cocher par fichier (et **Tout sélectionner** en haut de la liste) permet d'appliquer une action à plusieurs fichiers à la fois.
 :::
+
+::: tip Vous êtes développeur ?
+Une version technique de cette rubrique existe dans la [Documentation Développeur](../../developers/admin-panel/media-management).
+:::
