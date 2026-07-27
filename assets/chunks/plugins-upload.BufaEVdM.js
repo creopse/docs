@@ -1,0 +1,1 @@
+const s="/docs/images/screenshots/en/light/plugins-list.png",n="/docs/images/screenshots/en/dark/plugins-list.png",o="/docs/images/screenshots/en/light/plugins-upload.png",e="/docs/images/screenshots/en/dark/plugins-upload.png";export{s as _,n as a,o as b,e as c};

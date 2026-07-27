@@ -1,0 +1,1 @@
+const s="/docs/images/screenshots/fr/light/roles.png",o="/docs/images/screenshots/fr/dark/roles.png",r="/docs/images/screenshots/fr/light/permissions.png",e="/docs/images/screenshots/fr/dark/permissions.png";export{s as _,o as a,r as b,e as c};
