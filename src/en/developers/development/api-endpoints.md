@@ -66,6 +66,7 @@ The core of the API — consumed both by the admin interface (writes) and by fro
 | `GET` | `/content-model/items`, `/content-model/items/{contentModelItem}` | Public |
 | `POST` `PUT` `DELETE` | `/content-model/items`, `/content-model/items/{contentModelItem}` | Authenticated |
 | `POST` `PUT` `DELETE` | `/content-model/user-items` (+ `/{id}`) | Public — visitor submission (forms) |
+| `PUT` | `/content-model-items/position` | Authenticated |
 | `POST` | `/content-model-items/list` | Authenticated |
 | `GET` | `/content-model-items/search/{query?}/{contentModelId?}` | Authenticated |
 | `PUT` | `/content-model-items/related/{contentModelItem}` | Authenticated |

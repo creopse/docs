@@ -29,7 +29,7 @@ Each model displays:
 - Trash icon — deletes the model.
 - The model's name.
 - Two tags: its `intent` (e.g. "Editorial content") and its `access-scope` (e.g. "Internal (system + administration)") — see [Content Models](../../development/content-models#intent-and-access-scope) for details on these values.
-- **Open** — accesses the model's item list (creating, editing, deleting items).
+- **Open** — accesses the model's item list (creating, editing, deleting items). A **Reorder items** action (drag and drop) sets each item's display position — fetch items with `sortBy: 'position'` to read that order back, see [Content Models](../../development/content-models#consuming-a-content-model).
 
 ::: tip For developers
 Creating models and items can also be scripted through the CLI — see [`creopse content-model`](../../resources/cli#creopse-content-model-alias-cm). A model with a detail page then needs to be wired through a [permalink](./permalinks).

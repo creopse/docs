@@ -156,8 +156,8 @@ Gère les modèles de contenu. Un modèle de contenu définit une structure ; le
 - `access-scope` : `internal` (associé à `editorial-content`) ou `user-editable` (associé à `user-data`).
 - **Options `add`** : `--title`/`--description` (répétables), `--image <valeur>`, `--data-structure <json|@chemin>`, `--title-field-name <valeur>`, `--has-permalink <bool>`.
 - **Options `edit`** : mêmes options que `add`, plus `--intent`, `--access-scope`.
-- **Options `item-add`** : `--title` (répétable), `--data <json|@chemin>`, `--is-active <bool>` (défaut `true`), `--created-by-type <valeur>` (`user`/`admin`/`system`, défaut `system`).
-- **Options `item-edit`** : `--content-model <name>` (déplace l'item vers un autre modèle), `--title` (répétable), `--data <json|@chemin>`, `--is-active <bool>`, `--created-by-type <valeur>`.
+- **Options `item-add`** : `--title` (répétable), `--data <json|@chemin>`, `--is-active <bool>` (défaut `true`), `--position <nombre>` (défaut `0`), `--created-by-type <valeur>` (`user`/`admin`/`system`, défaut `system`).
+- **Options `item-edit`** : `--content-model <name>` (déplace l'item vers un autre modèle), `--title` (répétable), `--data <json|@chemin>`, `--is-active <bool>`, `--position <nombre>`, `--created-by-type <valeur>`.
 
 ```bash
 # Modèle de contenu éditorial, avec page de détail
