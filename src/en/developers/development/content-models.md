@@ -96,6 +96,12 @@ const { items, total, currentPage } = await getPaginatedContentModelItems(
 
 Use `getContentModelItems` for a small volume loaded at once, `getPaginatedContentModelItems` as soon as server-side pagination or filtering is needed.
 
+Items also carry a `position` field, set from the admin panel's drag-and-drop **Reorder items** action. Pass `sortBy: 'position'` (both functions accept `sortBy`/`sortDirection`) to fetch items in that order instead of the default (`created_at desc`):
+
+```ts
+const services = await getContentModelItems('service', true, 'position', 'asc')
+```
+
 ### Detail
 
 On a detail page (`ServiceDetails.vue`/`ServiceDetails.tsx`), the current item is exposed through `useProps()`:

@@ -29,7 +29,7 @@ Chaque modèle affiche :
 - Icône corbeille — supprime le modèle.
 - Le nom du modèle.
 - Deux étiquettes : son `intent` (ex. « Contenu éditorial ») et son `access-scope` (ex. « Interne (système + administration) ») — voir [Modèles de contenu](../../development/content-models#intent-et-access-scope) pour le détail de ces valeurs.
-- **Ouvrir** — accède à la liste des items du modèle (création, édition, suppression d'items).
+- **Ouvrir** — accède à la liste des items du modèle (création, édition, suppression d'items). Une action **Réorganiser les items** (glisser-déposer) définit la position d'affichage de chaque item — récupérer les items avec `sortBy: 'position'` pour retrouver cet ordre, voir [Modèles de contenu](../../development/content-models#consommer-un-modele-de-contenu).
 
 ::: tip Pour les développeurs
 La création de modèles et d'items peut aussi être scriptée via la CLI — voir [`creopse content-model`](../../resources/cli#creopse-content-model-alias-cm). Un modèle avec une page de détail doit ensuite être câblé via un [permalien](./permalinks).

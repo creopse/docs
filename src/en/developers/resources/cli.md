@@ -156,8 +156,8 @@ Manages content models. A content model defines a structure; items are the actua
 - `access-scope`: `internal` (paired with `editorial-content`) or `user-editable` (paired with `user-data`).
 - **`add` options**: `--title`/`--description` (repeatable), `--image <value>`, `--data-structure <json|@path>`, `--title-field-name <value>`, `--has-permalink <bool>`.
 - **`edit` options**: same as `add`, plus `--intent`, `--access-scope`.
-- **`item-add` options**: `--title` (repeatable), `--data <json|@path>`, `--is-active <bool>` (default `true`), `--created-by-type <value>` (`user`/`admin`/`system`, default `system`).
-- **`item-edit` options**: `--content-model <name>` (moves the item to another model), `--title` (repeatable), `--data <json|@path>`, `--is-active <bool>`, `--created-by-type <value>`.
+- **`item-add` options**: `--title` (repeatable), `--data <json|@path>`, `--is-active <bool>` (default `true`), `--position <number>` (default `0`), `--created-by-type <value>` (`user`/`admin`/`system`, default `system`).
+- **`item-edit` options**: `--content-model <name>` (moves the item to another model), `--title` (repeatable), `--data <json|@path>`, `--is-active <bool>`, `--position <number>`, `--created-by-type <value>`.
 
 ```bash
 # Editorial content model, with a detail page

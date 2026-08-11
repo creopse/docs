@@ -66,6 +66,7 @@ Le cœur de l'API — consommé aussi bien par l'interface d'administration (éc
 | `GET` | `/content-model/items`, `/content-model/items/{contentModelItem}` | Public |
 | `POST` `PUT` `DELETE` | `/content-model/items`, `/content-model/items/{contentModelItem}` | Authentifié |
 | `POST` `PUT` `DELETE` | `/content-model/user-items` (+ `/{id}`) | Public — soumission par un visiteur (formulaires) |
+| `PUT` | `/content-model-items/position` | Authentifié |
 | `POST` | `/content-model-items/list` | Authentifié |
 | `GET` | `/content-model-items/search/{query?}/{contentModelId?}` | Authentifié |
 | `PUT` | `/content-model-items/related/{contentModelItem}` | Authentifié |
