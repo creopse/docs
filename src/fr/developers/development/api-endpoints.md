@@ -184,10 +184,13 @@ Voir [Développement de plugins](../plugins-development/basics#lister-installer-
 | `POST` | `/sms` | Envoi d'un SMS via le fournisseur configuré. | Authentifié |
 | `POST` | `/file/upload`, `/file/replace`, `/file/delete`, `/file/download`, `/file/check` | Upload/gestion de fichiers génériques (hors médiathèque). | Authentifié |
 | `GET` | `/translations/{locale}` | Chaînes de traduction de l'interface pour une langue donnée. | Public |
-| `GET` `PUT` | `/app-settings`, `/app-information` | Réglages globaux et [informations de base](../admin-panel/content-management/platform-identity) de la plateforme. | Public |
+| `GET` | `/app-settings/public` | Sous-ensemble de réglages autorisé (allowlist) — suffisant pour afficher le branding sur les pages d'authentification avant l'ouverture d'une session. | Public |
+| `GET` | `/app-information` | [Informations de base](../admin-panel/content-management/platform-identity) — aucun secret, tout l'index est donc public. | Public |
+| `GET` `PUT` | `/app-settings` | Réglages complets, y compris les secrets (ex. clés d'API de traduction). | Authentifié |
+| `PUT` | `/app-information` | | Authentifié |
 
 ::: tip
-`app-settings`/`app-information` ne sont pas protégées par `auth:sanctum` au niveau de la route — à garder en tête si l'un ou l'autre est étendu.
+`/app-settings/public` et l'index de `/app-information` contournent volontairement `auth:sanctum` — la page de connexion et les autres écrans pré-auth en ont besoin pour afficher le branding avant qu'une session existe. `/app-settings/public` n'expose qu'une allowlist explicite de clés (`AppSettingController::PUBLIC_KEYS`, plus toute clé `appearance.*`) ; une nouvelle clé de réglage ajoutée plus tard reste par défaut derrière `auth:sanctum` sur l'index complet `/app-settings`. `/app-information` n'a aucun champ sensible, exposer tout son index est donc sûr — mais les écritures sur les deux restent authentifiées.
 :::
 
 ## Installation & serveur
@@ -198,5 +201,6 @@ Ces routes servent principalement l'assistant d'installation web (voir [Installa
 | --- | --- | --- |
 | `GET` | `/` | Vérification de l'état du serveur. |
 | `POST` | `/server/configure` | Configuration initiale du serveur (URL, etc.). |
-| `GET` `POST` | `/database` (+ `/test`, `/create`, `/migrate`, `/seed`) | Connexion, création et migration de la base pendant l'installation. |
+| `GET` | `/database` | Vérification de connectivité sur la connexion configurée — accessible quel que soit l'état du verrou d'installation, car les pages d'authentification la vérifient avant qu'une session existe. |
+| `GET` `POST` | `/database/test`, `/database/create`, `/database/migrate`, `/database/seed` | Connexion à/création/migration/seed d'une base arbitraire pendant l'installation — protégé par le verrou d'installation. |
 | `POST` | `/install/finalize`, `/install/create-admin` | Finalisation de l'installation, création du premier compte administrateur. |

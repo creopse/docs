@@ -184,10 +184,13 @@ See [Plugin Development](../plugins-development/basics#listing-installing-and-ma
 | `POST` | `/sms` | Sends an SMS through the configured provider. | Authenticated |
 | `POST` | `/file/upload`, `/file/replace`, `/file/delete`, `/file/download`, `/file/check` | Upload/management of generic files (outside the media library). | Authenticated |
 | `GET` | `/translations/{locale}` | Interface translation strings for a given language. | Public |
-| `GET` `PUT` | `/app-settings`, `/app-information` | Global settings and [platform identity](../admin-panel/content-management/platform-identity). | Public |
+| `GET` | `/app-settings/public` | Allowlisted subset of settings — enough to render branding on auth pages before a session exists. | Public |
+| `GET` | `/app-information` | [Platform identity](../admin-panel/content-management/platform-identity) — no secrets, so the whole index is public. | Public |
+| `GET` `PUT` | `/app-settings` | Full settings, including secrets (e.g. translation API keys). | Authenticated |
+| `PUT` | `/app-information` | | Authenticated |
 
 ::: tip
-`app-settings`/`app-information` aren't protected by `auth:sanctum` at the route level — keep this in mind if either is extended.
+`/app-settings/public` and the `/app-information` index deliberately bypass `auth:sanctum` — the login page and other pre-auth screens need them to render branding before a session exists. `/app-settings/public` exposes only an explicit allowlist of keys (`AppSettingController::PUBLIC_KEYS`, plus any `appearance.*` key); a new setting key added later stays behind `auth:sanctum` on the full `/app-settings` index by default. `/app-information` has no sensitive fields at all, so exposing its whole index is safe — but writes to both stay authenticated.
 :::
 
 ## Installation & server
@@ -198,5 +201,6 @@ These routes mainly serve the web install wizard (see [Installation](../getting-
 | --- | --- | --- |
 | `GET` | `/` | Server health check. |
 | `POST` | `/server/configure` | Initial server configuration (URL, etc.). |
-| `GET` `POST` | `/database` (+ `/test`, `/create`, `/migrate`, `/seed`) | Connection, creation, and migration of the database during installation. |
+| `GET` | `/database` | Connectivity check for the configured connection — reachable regardless of installation lock state, since auth pages check it before a session can exist. |
+| `GET` `POST` | `/database/test`, `/database/create`, `/database/migrate`, `/database/seed` | Connects to/creates/migrates/seeds an arbitrary database during installation — gated behind the installation lock. |
 | `POST` | `/install/finalize`, `/install/create-admin` | Finalizes installation, creates the first administrator account. |
