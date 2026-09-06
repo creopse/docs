@@ -63,6 +63,7 @@ Le `PluginManager` reçu en paramètre expose les méthodes suivantes pour s'int
 | `registerMigrations(string $path)` | Ajoute un dossier de migrations propre au plugin. |
 | `registerConfig(string $key, string $path)` | Fusionne un fichier de configuration du plugin dans la config de l'application. |
 | `addHook(string $event, callable $callback)` | Écoute un événement de l'application (`Event::listen`). |
+| `registerPermissions(array $permissions)` | Déclare les permissions propres au plugin (`[['name' => 'vendor.some-permission', 'display_name' => ..., 'description' => ...]]`), synchronisées dans la même table que les permissions du cœur une fois l'application démarrée. Une route peut ensuite être protégée avec le middleware standard `permission:vendor.some-permission`, et la permission apparaît dans `GET /permissions` et dans l'écran Rôles de l'administration à côté de celles du cœur. |
 
 ## Générer des classes à l'intérieur d'un plugin
 

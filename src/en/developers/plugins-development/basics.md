@@ -63,6 +63,7 @@ The `PluginManager` received as a parameter exposes the following methods to int
 | `registerMigrations(string $path)` | Adds a migrations folder specific to the plugin. |
 | `registerConfig(string $key, string $path)` | Merges a plugin config file into the application's config. |
 | `addHook(string $event, callable $callback)` | Listens to an application event (`Event::listen`). |
+| `registerPermissions(array $permissions)` | Declares the plugin's own named permissions (`[['name' => 'vendor.some-permission', 'display_name' => ..., 'description' => ...]]`), synced into the same table as the core's permissions once the application has booted. A route can then be protected with the standard `permission:vendor.some-permission` middleware, and the permission appears in `GET /permissions` and the admin interface's Roles screen next to the core ones. |
 
 ## Generating classes inside a plugin
 
