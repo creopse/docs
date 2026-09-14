@@ -122,13 +122,13 @@ Voir [Authentification](./authentication#roles-et-permissions) pour le détail d
 
 | Méthode | Route | Accès |
 | --- | --- | --- |
-| `GET` | `/roles`, `/permissions` | Public |
-| `POST` `PUT` `DELETE` | `/roles`, `/permissions` (+ `/{id}`) | Authentifié |
+| `GET` `POST` `PUT` `DELETE` | `/roles`, `/permissions` (+ `/{id}`) | Authentifié |
 | `GET` | `/roles/user/{user?}`, `/permissions/user/{user?}` | Authentifié |
-| `GET` | `/users`, `/users/{user}`, `/users/search/{query?}`, `/users/type/administrators` | Authentifié |
-| `POST` | `/users`, `/users/import` | Authentifié + permission `action-add-user` |
-| `PUT` | `/users/{user}` | Authentifié + permission `action-edit-user` |
-| `DELETE` | `/users/{user}` | Authentifié + permission `action-delete-user` |
+| `GET` | `/users/{user}` | Authentifié — son propre compte, ou permission `view-users` |
+| `GET` `POST` | `/users`, `/users/list`, `/users/search/{query?}`, `/users/type/administrators` | Authentifié + permission `view-users` |
+| `POST` | `/users`, `/users/import` | Authentifié + permission `create-user` |
+| `PUT` | `/users/{user}` | Authentifié + permission `edit-user` |
+| `DELETE` | `/users/{user}` | Authentifié + permission `delete-user` |
 | `PUT` | `/users/self/{user}` | Authentifié |
 | `GET` | `/user/permissions/{user?}`, `/user/sessions/{user?}`, `/user/devices/{user?}`, `/user/place/{user?}`, `/user/roles/{user?}` | Authentifié |
 | `GET` | `/user/email/{email}`, `/user/phone/{phone}`, `/user/username/{username}` | Authentifié |
