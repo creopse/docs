@@ -88,7 +88,9 @@ Pour le téléphone :
 - C'est le **serveur** qui choisit le fournisseur SMS : `CREOPSE_PHONE_AUTH_PROVIDER`, sinon le premier configuré. Twilio est pour l'instant le seul fournisseur ; on peut en ajouter un en implémentant le contrat `PhoneVerifier` et en le déclarant dans `PhoneVerifierResolver`. Le client ne peut pas le choisir.
 - Le fournisseur génère, fait expirer et vérifie les codes : un code Twilio Verify ne fonctionne qu'une fois et expire au bout de 10 minutes.
 - Après **5 codes erronés** pour un même numéro, le code est invalidé (`auth/code_expired`) et il faut en demander un nouveau. Un code erroné renvoie `422` avec `auth/code_verification_failed`.
-- `allow_registration: true` crée le compte si le numéro est inconnu et que l'[inscription](#inscription) est ouverte.
+- `/auth/phone` répond toujours `200`, que le numéro ait un compte ou non, pour ne pas révéler quels numéros sont inscrits. Un code n'est envoyé qu'à un numéro connu, ou à un numéro inconnu quand `allow_registration: true` est envoyé et que l'[inscription](#inscription) est ouverte (sinon rien n'arrive).
+- Pour une inscription, `firstname`, `lastname` et `preferences` sont envoyés avec `/auth/phone`. Le compte n'est créé que par `/auth/phone/verify`, une fois le code vérifié, et seulement si l'inscription est toujours ouverte. Comme toute inscription, il attend ensuite la validation d'un administrateur (`403`, `auth/user_disabled`), sauf le tout premier compte.
+- Un numéro sans compte ni inscription en cours échoue sur `/auth/phone/verify` comme un code erroné.
 
 ::: warning
 `laravel/socialite` figure parmi les dépendances du package, mais n'est **pas** utilisé par ces intégrations — l'authentification Google/Apple/téléphone est implémentée directement, sans passer par Socialite.
