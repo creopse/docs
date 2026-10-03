@@ -17,6 +17,15 @@ La liste affiche, pour chaque utilisateur, son avatar, son nom, son type de comp
 - **Importer**/**Exporter** permettent de gérer plusieurs comptes à la fois via un fichier.
 - Le champ **Rechercher** retrouve un utilisateur précis.
 
+### Inscription
+
+La possibilité pour de nouveaux comptes de s'inscrire eux-mêmes se règle dans les **Paramètres de l'application**, avec deux interrupteurs, tous deux désactivés par défaut :
+
+- **Permettre l'inscription depuis l'administration** : le formulaire d'inscription de l'interface d'administration.
+- **Permettre l'inscription depuis le site** : l'inscription depuis un site construit sur un template (formulaire, Google, Apple, téléphone).
+
+Un compte créé ainsi reste désactivé jusqu'à ce qu'un administrateur l'active depuis cette liste. En attendant, il peut seulement compléter son profil et vérifier son email.
+
 ## Rôles
 
 Un rôle regroupe un ensemble de permissions et se distribue aux utilisateurs. Trois rôles existent par défaut :
