@@ -56,7 +56,7 @@ Creating an account is only possible if registration is open. Two settings, both
 
 | Setting | Applies to |
 | --- | --- |
-| `allowRegistration` | Registration from the admin panel (requests sent with `guard: admin`). |
+| `allowAdminRegistration` | Registration from the admin panel (requests sent with `guard: admin`). |
 | `allowSiteRegistration` | Registration from a site built on a template, or any other client: every other request, including Google, Apple, and phone sign-up. |
 
 When registration is closed, the request is refused with `403` and the `auth/registration_disabled` error code, before any account is created or any SMS is sent. Existing accounts can still sign in with every method. The very first account can always be created, since it becomes the platform's `super-admin`.
@@ -77,7 +77,7 @@ These methods are meant for sites built on a template; the admin panel only uses
 | --- | --- | --- |
 | Google | Verifies the ID token through the `Google\Client` SDK, audience included. | `GOOGLE_CLIENT_ID` is set (`config/services.php`). |
 | Apple | Verifies the received `identity_token` JWT against Apple's public keys (JWKS), and checks that its audience matches `APPLE_CLIENT_ID`. | `APPLE_CLIENT_ID` is set (`config/services.php`). |
-| Phone | Verification code sent by SMS, through Twilio Verify (`TWILIO_SID`/`TWILIO_TOKEN`/`TWILIO_SERVICE`) or Wassa SMS (`WASSA_SMS_TOKEN`/`WASSA_SMS_ENDPOINT`). | An SMS provider is configured. |
+| Phone | Verification code sent by SMS, through Twilio Verify (`TWILIO_SID`/`TWILIO_TOKEN`/`TWILIO_SERVICE`). | Twilio is configured. |
 
 A method that isn't configured answers `403` with the `auth/method_disabled` error code.
 
@@ -85,8 +85,8 @@ Google and Apple match an existing account by email only when the provider repor
 
 For the phone:
 
-- The **server** picks the SMS provider: `CREOPSE_PHONE_AUTH_PROVIDER` (`twilio` or `wassa_sms`), or else the first configured one, Twilio first. The client can no longer choose it.
-- A code works **once**, and expires after 10 minutes with Wassa SMS (Twilio Verify manages its own).
+- The **server** picks the SMS provider: `CREOPSE_PHONE_AUTH_PROVIDER`, or else the first configured one. Twilio is currently the only provider; another one can be added by implementing the `PhoneVerifier` contract and listing it in `PhoneVerifierResolver`. The client can't choose it.
+- The provider generates, expires, and checks the codes: a Twilio Verify code works once and expires after 10 minutes.
 - After **5 wrong codes** for the same number, the code is discarded (`auth/code_expired`) and a new one must be requested. A wrong code returns `422` with `auth/code_verification_failed`.
 - `allow_registration: true` creates the account if the number is unknown and [registration](#registration) is open.
 
@@ -161,5 +161,5 @@ The authentication-specific `errorCode` values:
 | `config/auth.php` | Guards (`web`, `admin`), providers, user model. |
 | `config/sanctum.php` | Stateful domains (`SANCTUM_STATEFUL_DOMAINS`), guards checked (`web`, `admin`), token expiration. |
 | `config/permission.php` | `spatie/laravel-permission` configuration (tables, cache). |
-| `config/services.php` | Google, Apple, Twilio, and Wassa SMS credentials. |
+| `config/services.php` | Google, Apple, and Twilio credentials. |
 | `config/creopse.php` | `phone_auth_provider` (`CREOPSE_PHONE_AUTH_PROVIDER`). |

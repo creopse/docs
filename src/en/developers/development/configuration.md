@@ -151,7 +151,7 @@ return [
 
 ##### `phone_auth_provider`
 
-- **Description**: `'twilio'` or `'wassa_sms'`. When empty, the first configured provider is used, Twilio first. Phone sign-in answers only once a provider is configured — see [Authentication](./authentication#logging-in-through-a-third-party-provider).
+- **Description**: The provider name, among those `PhoneVerifierResolver` knows — currently `'twilio'`. When empty, the first configured provider is used. Phone sign-in answers only once a provider is configured — see [Authentication](./authentication#logging-in-through-a-third-party-provider).
 - **Default value**: `null`
 
 ---
