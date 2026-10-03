@@ -139,6 +139,23 @@ return [
 
 ---
 
+#### Phone authentication provider
+
+The SMS provider used by phone sign-in (`/auth/phone`). Its credentials live in `config/services.php`.
+
+```php
+return [
+  'phone_auth_provider' => env('CREOPSE_PHONE_AUTH_PROVIDER'),
+]
+```
+
+##### `phone_auth_provider`
+
+- **Description**: `'twilio'` or `'wassa_sms'`. When empty, the first configured provider is used, Twilio first. Phone sign-in answers only once a provider is configured — see [Authentication](./authentication#logging-in-through-a-third-party-provider).
+- **Default value**: `null`
+
+---
+
 ## Environment variables
 
 Summary of all environment variables exposed by Creopse.
@@ -149,3 +166,4 @@ Summary of all environment variables exposed by Creopse.
 | `CREOPSE_COMPRESSION`            | `compression.enabled`        | `true`        |
 | `CREOPSE_COMPRESSION_LEVEL`      | `compression.level`          | `5`           |
 | `CREOPSE_COMPRESSION_MIN_LENGTH` | `compression.min_length`     | `1024`        |
+| `CREOPSE_PHONE_AUTH_PROVIDER`    | `phone_auth_provider`        | `null`        |

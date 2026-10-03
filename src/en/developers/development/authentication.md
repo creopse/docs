@@ -27,20 +27,20 @@ For the session cookie to work cross-origin (SPA on one domain, API on another),
 | Method | Route | Description | Access |
 | --- | --- | --- | --- |
 | `POST` | `/auth/login` | Login with email/username + password. | Public |
-| `POST` | `/auth/register` | Registration. The very first user created automatically receives the `super-admin` role. | Public |
+| `POST` | `/auth/register` | Registration, if open (see [Registration](#registration)). The very first user created automatically receives the `super-admin` role. | Public |
 | `POST` | `/auth/google` | Login through a Google ID token. | Public |
 | `POST` | `/auth/apple` | Login through an Apple `identity_token`. | Public |
 | `POST` | `/auth/phone` | Sends a verification code by SMS. | Public |
 | `POST` | `/auth/phone/verify` | Validates the code sent, logs in. | Public |
-| `POST` | `/auth/send-password-link` | Sends a password reset link. | Public |
-| `POST` | `/auth/reset-password` | Resets the password using the received link. | Public |
-| `POST` | `/auth/edit-password` | Changes the password (logged-in user). | Authenticated |
-| `POST` | `/auth/edit-email` | Changes the email — resets verification. | Authenticated |
+| `POST` | `/auth/send-password-link` | Sends a password reset link. Always answers the same way, whether or not the address has an account. | Public |
+| `POST` | `/auth/reset-password` | Resets the password using the received link, and signs the user out everywhere. | Public |
+| `POST` | `/auth/edit-password` | Changes the password (`currentPassword` required), and signs out the user's other sessions and tokens. | Authenticated |
+| `POST` | `/auth/edit-email` | Changes the email (`currentPassword` required) — resets verification, sends a reset link to the new address and a notice to the previous one. | Authenticated |
 | `POST` | `/auth/edit-username` | Changes the username. | Authenticated |
 | `GET` | `/auth/send-verification-email` | Resends the verification email. | Authenticated |
-| `GET` | `/auth/verify-email/{id}/{hash}` | Validates the verification link (signed URL). | Authenticated |
-| `GET` | `/auth/logout/{guard?}` | Logs out (revokes the token in mobile mode, invalidates the session otherwise). | Authenticated |
-| `GET` | `/auth/disable-account` | Disables the current account (`account_status`), without deleting it. | Authenticated |
+| `GET` | `/auth/verify-email/{id}/{hash}` | Validates the verification link: the `expires` and `signature` of the received link are required. | Authenticated |
+| `GET` | `/auth/logout/{guard?}` | Logs out (revokes the token in mobile mode, invalidates the session otherwise). `guard`: `web` or `admin`. | Authenticated |
+| `GET` | `/auth/disable-account` | Disables the current account (`account_status`) without deleting it, and revokes its tokens and sessions. | Authenticated |
 | `GET` | `/auth/tokens/{name}` | Lists the user's active tokens by name. | Authenticated |
 | `POST` | `/auth/tokens/revoke/{id}` | Revokes a specific token. | Authenticated |
 | `POST` | `/auth/profile` | Attaches an admin profile to a user. | Authenticated — own account, or `create-user` permission |
@@ -50,19 +50,45 @@ The `guard` parameter accepted by `/auth/login` and `/auth/register` can only be
 
 `account_status` is always computed server-side and cannot be sent by the client: the very first account is enabled, every later one is created disabled until an administrator enables it. This applies to every registration path (email, Google, Apple, phone).
 
+## Registration
+
+Creating an account is only possible if registration is open. Two settings, both **off** by default, control it from **App Settings** in the admin panel:
+
+| Setting | Applies to |
+| --- | --- |
+| `allowRegistration` | Registration from the admin panel (requests sent with `guard: admin`). |
+| `allowSiteRegistration` | Registration from a site built on a template, or any other client: every other request, including Google, Apple, and phone sign-up. |
+
+When registration is closed, the request is refused with `403` and the `auth/registration_disabled` error code, before any account is created or any SMS is sent. Existing accounts can still sign in with every method. The very first account can always be created, since it becomes the platform's `super-admin`.
+
+Both settings are part of `/app-settings/public`, so a template can hide its sign-up form when registration is closed.
+
+## Disabled and pending accounts
+
+A disabled account — including a freshly registered one awaiting approval — is refused on every authenticated route (core and plugins) with `403` and the `auth/user_disabled` error code. Only the onboarding steps remain reachable: creating the profile (`POST /auth/profile`), sending and validating the verification email, and logging out.
+
+Login checks the status before opening a session. Disabling an account, by an administrator or by its owner, revokes its tokens and, with the `database` session driver, its web sessions.
+
 ## Logging in through a third-party provider
 
-| Provider | Mechanism |
-| --- | --- |
-| Google | Verifies the ID token through the `Google\Client` SDK (`GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET`/`GOOGLE_REDIRECT` in `config/services.php`). |
-| Apple | Verifies the received `identity_token` JWT against Apple's public keys (JWKS), and checks that its audience matches `APPLE_CLIENT_ID` (`config/services.php`). |
-| Phone | Verification code sent through Twilio Verify (`TWILIO_SID`/`TWILIO_TOKEN`/`TWILIO_SERVICE`) or a configured alternative SMS provider. With an alternative provider, the code expires after 10 minutes. |
+These methods are meant for sites built on a template; the admin panel only uses email/username login.
 
-In all three cases, a user is automatically created if none exists yet (`auth_type` set accordingly), then logged in following the mode determined above.
+| Provider | Mechanism | Enabled when |
+| --- | --- | --- |
+| Google | Verifies the ID token through the `Google\Client` SDK, audience included. | `GOOGLE_CLIENT_ID` is set (`config/services.php`). |
+| Apple | Verifies the received `identity_token` JWT against Apple's public keys (JWKS), and checks that its audience matches `APPLE_CLIENT_ID`. | `APPLE_CLIENT_ID` is set (`config/services.php`). |
+| Phone | Verification code sent by SMS, through Twilio Verify (`TWILIO_SID`/`TWILIO_TOKEN`/`TWILIO_SERVICE`) or Wassa SMS (`WASSA_SMS_TOKEN`/`WASSA_SMS_ENDPOINT`). | An SMS provider is configured. |
 
-::: danger
-`APPLE_CLIENT_ID` must be set for Apple login to work: without it, every token is rejected.
-:::
+A method that isn't configured answers `403` with the `auth/method_disabled` error code.
+
+Google and Apple match an existing account by email only when the provider reports the address as verified. If no account matches, one is created if [registration](#registration) is open (`auth_type` set accordingly), then logged in following the mode determined above.
+
+For the phone:
+
+- The **server** picks the SMS provider: `CREOPSE_PHONE_AUTH_PROVIDER` (`twilio` or `wassa_sms`), or else the first configured one, Twilio first. The client can no longer choose it.
+- A code works **once**, and expires after 10 minutes with Wassa SMS (Twilio Verify manages its own).
+- After **5 wrong codes** for the same number, the code is discarded (`auth/code_expired`) and a new one must be requested. A wrong code returns `422` with `auth/code_verification_failed`.
+- `allow_registration: true` creates the account if the number is unknown and [registration](#registration) is open.
 
 ::: warning
 `laravel/socialite` is listed among the package's dependencies but is **not** used by these integrations — Google/Apple/phone authentication is implemented directly, without going through Socialite.
@@ -92,7 +118,7 @@ Three default roles are provided:
 
 `php artisan permissions:sync` recreates any missing default permission (`--check` only reports differences). It does not change role assignments.
 
-Every `/roles` and `/permissions` route requires `auth:sanctum`, reads included. Some user management actions additionally require a named permission:
+Admin routes are protected by named permissions, matching the admin panel screens that use them:
 
 | Action | Permission |
 | --- | --- |
@@ -100,8 +126,33 @@ Every `/roles` and `/permissions` route requires `auth:sanctum`, reads included.
 | Create, import users (`POST /users`, `POST /users/import`) | `create-user` |
 | Edit a user (`PUT /users/{user}`) | `edit-user` |
 | Delete a user (`DELETE /users/{user}`) | `delete-user` |
+| Read roles | `view-roles` or `manage-roles`, or one of `view-users`/`create-user`/`edit-user` (the Users screen lists roles) |
+| Create, edit, delete roles | `manage-roles` |
+| Read permissions | `view-permissions` or `manage-permissions` |
+| Create, edit, delete permissions | `manage-permissions` |
+
+`PUT /users/self/{user}` only lets a user change their own profile fields (`avatar`, `firstname`, `lastname`, `phone`, `address`, `location`, `preferences`): roles, status, and password are ignored there. The [API reference](./api-endpoints) lists the permission each route requires.
 
 A plugin can declare its own permissions with `registerPermissions()` (see [Plugin basics](../plugins-development/basics)). They are created under the same `admin` guard, so a plugin route is protected with the same `permission:xxx` middleware as a core route.
+
+## Passwords
+
+Every password a user sets — registration, reset, change, account creation by an administrator or by the installer — must be at least 8 characters long and contain a letter and a digit (`PasswordPolicy::complexity()`).
+
+## Error codes
+
+The authentication-specific `errorCode` values:
+
+| Code | Meaning |
+| --- | --- |
+| `auth/invalid_credentials` | Wrong identifier or password — same answer for both. |
+| `auth/user_disabled` | Disabled or pending account. |
+| `auth/registration_disabled` | Registration is closed for this client. |
+| `auth/method_disabled` | Google, Apple, or phone sign-in isn't configured. |
+| `auth/wrong_password` | Wrong current password (password or email change). |
+| `auth/invalid_token` | Invalid provider token, or invalid email verification link. |
+| `auth/code_verification_failed` | Wrong phone code. |
+| `auth/code_expired` | Phone code discarded after too many attempts — request a new one. |
 
 ## Configuration
 
@@ -110,3 +161,5 @@ A plugin can declare its own permissions with `registerPermissions()` (see [Plug
 | `config/auth.php` | Guards (`web`, `admin`), providers, user model. |
 | `config/sanctum.php` | Stateful domains (`SANCTUM_STATEFUL_DOMAINS`), guards checked (`web`, `admin`), token expiration. |
 | `config/permission.php` | `spatie/laravel-permission` configuration (tables, cache). |
+| `config/services.php` | Google, Apple, Twilio, and Wassa SMS credentials. |
+| `config/creopse.php` | `phone_auth_provider` (`CREOPSE_PHONE_AUTH_PROVIDER`). |

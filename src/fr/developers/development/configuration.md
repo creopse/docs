@@ -139,6 +139,23 @@ return [
 
 ---
 
+#### Fournisseur d'authentification par téléphone
+
+Le fournisseur SMS utilisé par la connexion par téléphone (`/auth/phone`). Ses identifiants se trouvent dans `config/services.php`.
+
+```php
+return [
+  'phone_auth_provider' => env('CREOPSE_PHONE_AUTH_PROVIDER'),
+]
+```
+
+##### `phone_auth_provider`
+
+- **Description** : `'twilio'` ou `'wassa_sms'`. Si la valeur est vide, le premier fournisseur configuré est utilisé, Twilio d'abord. La connexion par téléphone ne répond que lorsqu'un fournisseur est configuré — voir [Authentification](./authentication#connexion-via-un-fournisseur-tiers).
+- **Valeur par défaut** : `null`
+
+---
+
 ## Variables d'environnement
 
 Tableau récapitulatif de toutes les variables d'environnement exposées par Creopse.
@@ -149,3 +166,4 @@ Tableau récapitulatif de toutes les variables d'environnement exposées par Cre
 | `CREOPSE_COMPRESSION`             | `compression.enabled`        | `true`            |
 | `CREOPSE_COMPRESSION_LEVEL`       | `compression.level`          | `5`               |
 | `CREOPSE_COMPRESSION_MIN_LENGTH`  | `compression.min_length`     | `1024`            |
+| `CREOPSE_PHONE_AUTH_PROVIDER`     | `phone_auth_provider`        | `null`            |

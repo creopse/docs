@@ -17,6 +17,15 @@ The list shows, for each user, their avatar, name, account type, roles, and emai
 - **Import**/**Export** let you manage several accounts at once through a file.
 - The **Search** field finds a specific user.
 
+### Registration
+
+Whether new accounts can sign up on their own is set in **App Settings**, with two switches, both off by default:
+
+- **Allow registration from the admin panel**: the sign-up form of the admin interface.
+- **Allow registration from the site**: sign-up from a site built on a template (form, Google, Apple, phone).
+
+An account created this way stays disabled until an administrator enables it from this list. Until then, it can only complete its profile and verify its email.
+
 ## Roles
 
 A role groups a set of permissions and is assigned to users. Three roles exist by default:
