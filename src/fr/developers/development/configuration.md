@@ -151,7 +151,7 @@ return [
 
 ##### `phone_auth_provider`
 
-- **Description** : `'twilio'` ou `'wassa_sms'`. Si la valeur est vide, le premier fournisseur configuré est utilisé, Twilio d'abord. La connexion par téléphone ne répond que lorsqu'un fournisseur est configuré — voir [Authentification](./authentication#connexion-via-un-fournisseur-tiers).
+- **Description** : Le nom du fournisseur, parmi ceux que connaît `PhoneVerifierResolver` — pour l'instant `'twilio'`. Si la valeur est vide, le premier fournisseur configuré est utilisé. La connexion par téléphone ne répond que lorsqu'un fournisseur est configuré — voir [Authentification](./authentication#connexion-via-un-fournisseur-tiers).
 - **Valeur par défaut** : `null`
 
 ---
